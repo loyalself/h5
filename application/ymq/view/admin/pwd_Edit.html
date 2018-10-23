@@ -1,0 +1,72 @@
+﻿{include file="public/meta"}
+<article class="page-container">
+  <form  method="post" class="form form-horizontal" id="form-change-password">
+    <div class="row cl">
+      <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>账户：</label>
+      <div class="formControls col-xs-8 col-sm-9"> {$one.username} </div>
+    </div>
+    <div class="row cl">
+      <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>新密码：</label>
+      <div class="formControls col-xs-8 col-sm-9">
+        <input type="password" class="input-text" autocomplete="off"  name="password" id="password">
+      </div>
+    </div>
+    <div class="row cl">
+      <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>确认密码：</label>
+      <div class="formControls col-xs-8 col-sm-9">
+        <input type="password" class="input-text" autocomplete="off"  name="password2" id="password2">
+      </div>
+    </div>
+    <div class="row cl">
+      <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+        <input hidden value="<?php echo $one['id']?>" name="id">
+        <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;保存&nbsp;&nbsp;">
+      </div>
+    </div>
+  </form>
+</article>
+{include file="public/footer"}
+<script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#form-change-password").validate({
+            rules:{
+                password:{
+                    required:true,
+                    minlength:6,
+                    maxlength:16
+                },
+                password2:{
+                    required:true,
+                    minlength:6,
+                    maxlength:16,
+                    equalTo: "#password"
+                },
+            },
+            onkeyup:false,
+            focusCleanup:true,
+            success:"valid",
+            submitHandler:function(form)
+            {
+                var data = $(form).serialize();
+                url = "{:url('admin/pwdEdit')}";
+                $.post(url,data,function(result)
+                {
+                    if(result.status == 1)
+                    {
+                        layer.msg(result.msg,{icon:1,time:2000});
+                        setInterval("closeWindow()",2000);
+                    }else{
+                        layer.msg(result.msg,{icon:5,time:2000});
+                    }
+                },'JSON');
+            }
+        });
+    });
+    function closeWindow(){
+        var index = parent.layer.getFrameIndex(window.name);
+        window.parent.location.reload();
+    }
+</script>

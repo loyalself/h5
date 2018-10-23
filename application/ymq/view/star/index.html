@@ -1,0 +1,187 @@
+{include file="public/meta"}
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span>
+    内容管理 <span class="c-gray en">&gt;</span> 球员国家列表
+    <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+        <i class="Hui-iconfont">&#xe68f;</i>
+    </a>
+</nav>
+
+<div class="page-container">
+    <div class="text-c">
+        <button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
+        <input type="text" class="input-text" style="width:250px" placeholder="输入管理员名称" id="" name="">
+        <button type="submit" class="btn btn-success" id="username" name="username">
+            <i class="Hui-iconfont">&#xe665;</i> 搜索
+        </button>
+    </div>
+
+    <div class="cl pd-5 bg-1 bk-gray mt-20">
+		<span class="l">
+			<a href="javascript:;" onclick="add('添加球员或国家','/ymq/star/star','700','500')" class="btn btn-primary radius">
+				<i class="Hui-iconfont">&#xe600;</i> 添加球员或国家
+			</a>
+		</span>
+    </div>
+
+    <table class="table table-border table-bg">
+        <thead>
+        <tr>
+            <th scope="col" colspan="9">信息列表</th>
+        </tr>
+        <tr class="text-c">
+            <th width="40">ID</th>
+            <th width="100">名称</th>
+            <th width="50">性别</th>
+            <th width="160">图片</th>
+            <th width="100">是否使用</th>
+            <th width="100">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {volist name="list" id="v"}
+        <tr class="text-c">
+            <td>{$v.id}</td>
+            <td>{$v.c_name}</td>
+
+            <td>
+                {switch name="$v.gender"}
+                    {case value="1"}男{/case}
+                    {case value="2"}女{/case}
+                    {case value="3"}无{/case}
+                    {default /}无
+                {/switch}
+            </td>
+
+            <td>
+                <img src="{$v.pic}" style="width: 80px;height:80px">
+            </td>
+            <td class="td-status">
+                {if condition="$v.status eq 1"}
+                <span class="label label-success radius">使用</span>
+                {elseif condition="$v.status eq 2"}
+                <span class="label radius">不使用</span>
+                {/if}
+            </td>
+            <td class="td-manage">
+                <a style="text-decoration:none"
+                   onClick="changeStatus('{$v.id}',
+                    '{$v.status == 1 ? 2 : 1}',
+                    'status',
+                    '{$v.status == 1 ? '您确认要禁用吗':'您确认要启用么'}')"
+                   href="javascript:;" title="停用">
+                    <i class="Hui-iconfont">&#xe631;</i>
+                </a>
+
+                <a title="编辑" href="javascript:;" onclick="edit('编辑','{:url('star/star',['id'=>$v.id])}','1','800','600')" class="ml-5" style="text-decoration:none">
+                    <i class="Hui-iconfont">&#xe6df;</i>
+                </a>
+                <a title="删除" href="javascript:;" onclick="del(this,'{$v.id}')" class="ml-5" style="text-decoration:none">
+                <i class="Hui-iconfont">&#xe6e2;</i>
+                </a>
+            </td>
+        </tr>
+        {/volist}
+        </tbody>
+    </table>
+</div>
+<!--_footer 作为公共模版分离出去-->
+{include file="public/footer"}
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__STATIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+    /*
+        参数解释：
+        title	标题
+        url		请求的url
+        id		需要操作的数据id
+        w		弹出层宽度（缺省调默认值）
+        h		弹出层高度（缺省调默认值）
+    */
+    /*球员或国家-增加*/
+    function add(title,url,w,h)
+    {
+        layer_show(title,url,w,h);
+    }
+    /*管理员-删除*/
+    function del(obj,id)
+    {
+        layer.confirm('确认要删除吗？',function(index)
+        {
+            $.ajax({
+                type: 'POST',
+                url: "{:url('star/del')}",
+                dataType: 'json',
+                data:{'id':id},
+                success: function(result)
+                {
+                    if(result.status == 1)
+                    {
+                        $(obj).parents("tr").remove();
+                        layer.msg(result.msg,{icon:1,time:2000});
+                    }else{
+                        layer.msg(result.msg,{icon:5,time:2000});
+                    }
+                },
+                error:function(result) {
+                    console.log(result.msg);
+                },
+            });
+        });
+    }
+
+    /*管理员-编辑*/
+    function edit(title,url,id,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*管理员-修改密码*/
+    function change_password(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*停用*/
+    function changeStatus(id,value,field,message)
+    {
+        layer.confirm(message,function(index)
+        {
+            //console.log(id);
+            //console.log(value);   //status改变的值
+            //console.log(field);   //要改变的字段
+            $.ajax({
+                type:'post',
+                url:"{:url('star/changeStatus')}",
+                data:{'id':id,'field':'status','value':value},
+                success:function(result)
+                {
+                    if(typeof result === 'string')
+                    {
+                        result = jQuery.parseJSON(result);
+                    }
+                    if(result.status == 1){
+                        layer.msg(result.msg,{icon: 1,time:1000});
+                        setInterval("loadPage()",1200);
+                    }else{
+                        layer.msg(result.msg,{icon:5,time:1000});
+                    }
+                }
+            });
+        });
+    }
+    function loadPage() {
+        location.reload();
+    }
+
+    /*管理员-启用*/
+    // function admin_start(obj,id){
+    //     layer.confirm('确认要启用吗？',function(index){
+    //         //此处请求后台程序，下方是成功后的前台处理……
+    //         $(obj).parents("tr").find(".td-manage").prepend('<a onClick="admin_stop(this,id)" href="javascript:;" title="停用" style="text-decoration:none"><i class="Hui-iconfont">&#xe631;</i></a>');
+    //         $(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已启用</span>');
+    //         $(obj).remove();
+    //         layer.msg('已启用!', {icon: 6,time:1000});
+    //     });
+    // }
+</script>
+</body>
+</html>

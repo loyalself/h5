@@ -1,0 +1,3320 @@
+---------------------------------------------------------------
+[ 2018-10-20T13:45:24+08:00 ] 58.64.187.24 GET /football/game_live/livelist/bigGame_id/3/phase_id/7.html
+[ info ] h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/7.html [运行时间：0.165659s][吞吐率：6.04req/s] [内存消耗：2,507.51kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/7.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'bigGame_id' => '3',
+  'phase_id' => '7',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:45:28+08:00 ] 58.64.187.24 GET /ymq/index/index.html
+[ info ] h5.phmovie.net/ymq/index/index.html [运行时间：0.012080s][吞吐率：82.78req/s] [内存消耗：1,618.42kb] [文件加载：44]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/h5/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:45:31+08:00 ] 58.64.187.24 GET /ymq/login/index.html
+[ info ] h5.phmovie.net/ymq/login/index.html [运行时间：0.011871s][吞吐率：84.24req/s] [内存消耗：1,619.53kb] [文件加载：42]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Login->index[ /www/h5/application/ymq/controller/Login.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/ymq/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:45:42+08:00 ] 58.64.187.24 POST /ymq/login/login.html
+[ info ] h5.phmovie.net/ymq/login/login.html [运行时间：0.200123s][吞吐率：5.00req/s] [内存消耗：2,601.51kb] [文件加载：48]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\ymq\controller\Login->login[ /www/h5/application/ymq/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038877s ] mysql:host=154.223.65.38;dbname=h5_admin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.029483s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.028743s ]
+[ sql ] [ SQL ] UPDATE `admin_user`  SET `ip`='58.64.187.24',`login_time`=1540014342  WHERE  `username` = 'admin' [ RunTime:0.024991s ]
+---------------------------------------------------------------
+[ 2018-10-20T13:45:44+08:00 ] 58.64.187.24 GET /ymq/index/index.html
+[ info ] h5.phmovie.net/ymq/index/index.html [运行时间：0.407892s][吞吐率：2.45req/s] [内存消耗：2,538.64kb] [文件加载：53]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ /www/h5/application/ymq/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/h5/public/../application/ymq/view/index/index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041267s ] mysql:host=154.223.65.38;dbname=h5_admin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.031343s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.237072s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.021487s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.020326s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.019545s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.019422s ]
+---------------------------------------------------------------
+[ 2018-10-20T13:45:44+08:00 ] 58.64.187.24 GET /ymq/index/welcome.html
+[ info ] h5.phmovie.net/ymq/index/welcome.html [运行时间：0.011253s][吞吐率：88.87req/s] [内存消耗：1,560.67kb] [文件加载：41]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ /www/h5/application/ymq/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:45:48+08:00 ] 58.64.187.24 GET /football/big_Game/bigGameList
+[ info ] h5.phmovie.net/football/big_Game/bigGameList [运行时间：0.093738s][吞吐率：10.67req/s] [内存消耗：2,449.08kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'big_Game',
+    2 => 'bigGameList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\BigGame->bigGameList[ /www/h5/application/football/controller/BigGame.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/big_game/big_game_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:45:50+08:00 ] 58.64.187.24 GET /football/big_Game/biggame.html
+[ info ] h5.phmovie.net/football/big_Game/biggame.html [运行时间：0.100345s][吞吐率：9.97req/s] [内存消耗：2,446.49kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'big_Game',
+    2 => 'biggame',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/big_Game/bigGameList',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\BigGame->bigGame[ /www/h5/application/football/controller/BigGame.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/big_game/big_game.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:45:50+08:00 ] 58.64.187.24 GET /football/big_Game/
+[ info ] h5.phmovie.net/football/big_Game/ [运行时间：0.013043s][吞吐率：76.67req/s] [内存消耗：1,811.51kb] [文件加载：47]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'big_Game',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/big_Game/biggame.html',
+  'accept' => '*/*',
+  'x-requested-with' => 'ShockwaveFlash/31.0.0.122',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:45:56+08:00 ] 58.64.187.24 GET /football/big_Game/bigGameList
+[ info ] h5.phmovie.net/football/big_Game/bigGameList [运行时间：0.107424s][吞吐率：9.31req/s] [内存消耗：2,449.08kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'big_Game',
+    2 => 'bigGameList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\BigGame->bigGameList[ /www/h5/application/football/controller/BigGame.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/big_game/big_game_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:00+08:00 ] 58.64.187.24 GET /football/game_phase/phaselist/id/3.html
+[ info ] h5.phmovie.net/football/game_phase/phaselist/id/3.html [运行时间：0.088327s][吞吐率：11.32req/s] [内存消耗：2,451.27kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'phaselist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phaseList[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_phase/phase_list.html [ array (
+  0 => 'bigGame_id',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:05+08:00 ] 58.64.187.24 GET /football/game_Phase/phase/bigGame_id/3
+[ info ] h5.phmovie.net/football/game_Phase/phase/bigGame_id/3 [运行时间：0.102754s][吞吐率：9.73req/s] [内存消耗：2,446.63kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_Phase',
+    2 => 'phase',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_phase/phaselist/id/3.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'bigGame_id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phase[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_phase/phase.html [ array (
+  0 => 'one',
+  1 => 'bigGame_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:12+08:00 ] 58.64.187.24 POST /football/game_phase/phase.html
+[ info ] h5.phmovie.net/football/game_phase/phase.html [运行时间：0.100142s][吞吐率：9.99req/s] [内存消耗：2,565.84kb] [文件加载：48]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'phase',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_Phase/phase/bigGame_id/3',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '46',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'phasegame_name' => '10.20',
+  'is_end' => '1',
+  'id' => '',
+  'bigGame_id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phase[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:14+08:00 ] 58.64.187.24 GET /football/game_phase/phaselist/id/3.html
+[ info ] h5.phmovie.net/football/game_phase/phaselist/id/3.html [运行时间：0.086432s][吞吐率：11.57req/s] [内存消耗：2,452.57kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'phaselist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_phase/phaselist/id/3.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phaseList[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_phase/phase_list.html [ array (
+  0 => 'bigGame_id',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:17+08:00 ] 58.64.187.24 GET /football/game_live/livelist/phase_id/8/bigGame_id/3.html
+[ info ] h5.phmovie.net/football/game_live/livelist/phase_id/8/bigGame_id/3.html [运行时间：0.099835s][吞吐率：10.02req/s] [内存消耗：2,510.81kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'phase_id' => '8',
+  'bigGame_id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:19+08:00 ] 58.64.187.24 GET /football/game_live/live/bigGame_id/3/phase_id/8.html
+[ info ] h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html [运行时间：0.088370s][吞吐率：11.32req/s] [内存消耗：2,510.95kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live.html [ array (
+  0 => 'bigGame_id',
+  1 => 'phase_id',
+  2 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:41+08:00 ] 58.64.187.24 GET /football/game_live/search.html?name=&who=1
+[ info ] h5.phmovie.net/football/game_live/search.html?name=&who=1 [运行时间：0.097944s][吞吐率：10.21req/s] [内存消耗：2,387.71kb] [文件加载：45]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => '',
+  'who' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->search[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:44+08:00 ] 58.64.187.24 GET /football/game_live/search.html?name=&who=2
+[ info ] h5.phmovie.net/football/game_live/search.html?name=&who=2 [运行时间：0.094936s][吞吐率：10.53req/s] [内存消耗：2,387.71kb] [文件加载：45]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => '',
+  'who' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->search[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:56+08:00 ] 58.64.187.24 POST /football/game_live/live.html
+[ info ] h5.phmovie.net/football/game_live/live.html [运行时间：0.224360s][吞吐率：4.46req/s] [内存消耗：2,778.97kb] [文件加载：56]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '218',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'start_time' => '2018-10-20 14:00',
+  'is_show_index' => '1',
+  'play_a_name' => '俄罗斯',
+  'play_b_name' => '巴西',
+  'analysis_type' => '1',
+  'bofang_type' => '2',
+  'liveUrl' => '',
+  'live_notice' => '',
+  'a_win_num' => '',
+  'b_win_num' => '',
+  'id' => '',
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:58+08:00 ] 58.64.187.24 GET /football/game_live/livelist/bigGame_id/3/phase_id/8.html
+[ info ] h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html [运行时间：0.174005s][吞吐率：5.75req/s] [内存消耗：2,503.42kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:46:59+08:00 ] 58.64.187.24 GET /football/guess/guess/game_id/17/game_number/381.html
+[ info ] h5.phmovie.net/football/guess/guess/game_id/17/game_number/381.html [运行时间：0.091236s][吞吐率：10.96req/s] [内存消耗：2,518.04kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '17',
+  'game_number' => '381',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess.html [ array (
+  0 => 'game_id',
+  1 => 'play_a_name',
+  2 => 'play_b_name',
+  3 => 'game_number',
+  4 => 'time',
+  5 => 'guess_end_time',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:47:43+08:00 ] 58.64.187.24 POST /football/guess/guess.html
+[ info ] h5.phmovie.net/football/guess/guess.html [运行时间：0.392796s][吞吐率：2.55req/s] [内存消耗：2,842.62kb] [文件加载：57]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guess/game_id/17/game_number/381.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '399',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '17',
+  'game_number' => '381',
+  'start_time' => '2018-10-20 13:46:59',
+  'end_time' => '2018-10-20 14:00:00',
+  'play_a_name' => '俄罗斯',
+  'play_b_name' => '巴西',
+  '1_winner_id' => '5.5',
+  '2_winner_id' => '1.2',
+  '3_winner_id' => '3.7',
+  '1_winner_rangfen' => '+1',
+  '1_rangfen_odds' => '3.2',
+  '2_rangfen_odds' => '2.7',
+  '3_rangfen_odds' => '3',
+  'is_score' => '1',
+  '1_score_odds' => '2.5',
+  '2_score_odds' => '1.4',
+  'total_score' => '2.5',
+  '1_dayu_odds' => '2.2',
+  '2_xiaoyu_odds' => '1.6',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:47:46+08:00 ] 58.64.187.24 GET /football/guess/guesslist/game_id/17.html
+[ info ] h5.phmovie.net/football/guess/guesslist/game_id/17.html [运行时间：0.142592s][吞吐率：7.01req/s] [内存消耗：2,525.59kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guesslist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guess/game_id/17/game_number/381.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guessList[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess_list.html [ array (
+  0 => 'list',
+  1 => 'game_id',
+  2 => 'game_number',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:48:19+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/34.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/34.html [运行时间：0.352832s][吞吐率：2.83req/s] [内存消耗：2,558.53kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/17.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '34',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:48:28+08:00 ] 58.64.187.24 GET /football/game_phase/phaselist/id/3.html
+[ info ] h5.phmovie.net/football/game_phase/phaselist/id/3.html [运行时间：0.096916s][吞吐率：10.32req/s] [内存消耗：2,452.23kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'phaselist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_phase/phaselist/id/3.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phaseList[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_phase/phase_list.html [ array (
+  0 => 'bigGame_id',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:49:06+08:00 ] 58.64.187.24 GET /football/game_phase/phaselist/id/2.html
+[ info ] h5.phmovie.net/football/game_phase/phaselist/id/2.html [运行时间：0.325837s][吞吐率：3.07req/s] [内存消耗：2,454.08kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'phaselist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phaseList[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_phase/phase_list.html [ array (
+  0 => 'bigGame_id',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:49:12+08:00 ] 58.64.187.24 POST /football/game_phase/del.html
+[ info ] h5.phmovie.net/football/game_phase/del.html [运行时间：0.100033s][吞吐率：10.00req/s] [内存消耗：2,358.71kb] [文件加载：48]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_phase/phaselist/id/2.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->del[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:49:14+08:00 ] 58.64.187.24 POST /football/game_phase/del.html
+[ info ] h5.phmovie.net/football/game_phase/del.html [运行时间：0.094748s][吞吐率：10.55req/s] [内存消耗：2,358.71kb] [文件加载：48]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_phase/phaselist/id/2.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->del[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:49:15+08:00 ] 58.64.187.24 POST /football/game_phase/del.html
+[ info ] h5.phmovie.net/football/game_phase/del.html [运行时间：0.094272s][吞吐率：10.61req/s] [内存消耗：2,358.71kb] [文件加载：48]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_phase/phaselist/id/2.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->del[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:49:17+08:00 ] 58.64.187.24 POST /football/game_phase/del.html
+[ info ] h5.phmovie.net/football/game_phase/del.html [运行时间：0.094230s][吞吐率：10.61req/s] [内存消耗：2,358.71kb] [文件加载：48]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_phase/phaselist/id/2.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'id' => '6',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->del[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:49:22+08:00 ] 58.64.187.24 GET /football/big_Game/bigGameList
+[ info ] h5.phmovie.net/football/big_Game/bigGameList [运行时间：0.100805s][吞吐率：9.92req/s] [内存消耗：2,449.08kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'big_Game',
+    2 => 'bigGameList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/big_Game/bigGameList',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\BigGame->bigGameList[ /www/h5/application/football/controller/BigGame.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/big_game/big_game_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:49:23+08:00 ] 58.64.187.24 GET /football/game_phase/phaselist/id/2.html
+[ info ] h5.phmovie.net/football/game_phase/phaselist/id/2.html [运行时间：0.091583s][吞吐率：10.92req/s] [内存消耗：2,450.02kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'phaselist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phaseList[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_phase/phase_list.html [ array (
+  0 => 'bigGame_id',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:50:21+08:00 ] 58.64.187.24 GET /football/game_phase/phaselist/id/3.html
+[ info ] h5.phmovie.net/football/game_phase/phaselist/id/3.html [运行时间：0.102826s][吞吐率：9.73req/s] [内存消耗：2,452.20kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'phaselist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phaseList[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_phase/phase_list.html [ array (
+  0 => 'bigGame_id',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:50:24+08:00 ] 58.64.187.24 GET /football/game_live/livelist/phase_id/8/bigGame_id/3.html
+[ info ] h5.phmovie.net/football/game_live/livelist/phase_id/8/bigGame_id/3.html [运行时间：0.134545s][吞吐率：7.43req/s] [内存消耗：2,503.59kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'phase_id' => '8',
+  'bigGame_id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:50:25+08:00 ] 58.64.187.24 GET /football/game_live/live/bigGame_id/3/phase_id/8.html
+[ info ] h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html [运行时间：0.095339s][吞吐率：10.49req/s] [内存消耗：2,510.95kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live.html [ array (
+  0 => 'bigGame_id',
+  1 => 'phase_id',
+  2 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:50:53+08:00 ] 58.64.187.24 GET /football/game_live/search.html?name=&who=1
+[ info ] h5.phmovie.net/football/game_live/search.html?name=&who=1 [运行时间：0.100968s][吞吐率：9.90req/s] [内存消耗：2,387.71kb] [文件加载：45]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => '',
+  'who' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->search[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:50:54+08:00 ] 58.64.187.24 GET /football/game_live/search.html?name=&who=2
+[ info ] h5.phmovie.net/football/game_live/search.html?name=&who=2 [运行时间：0.098957s][吞吐率：10.11req/s] [内存消耗：2,387.71kb] [文件加载：45]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => '',
+  'who' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->search[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:51:00+08:00 ] 58.64.187.24 POST /football/game_live/live.html
+[ info ] h5.phmovie.net/football/game_live/live.html [运行时间：0.240075s][吞吐率：4.17req/s] [内存消耗：2,778.91kb] [文件加载：56]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '218',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'start_time' => '',
+  'is_show_index' => '0',
+  'play_a_name' => '罗马尼亚',
+  'play_b_name' => '土耳其',
+  'analysis_type' => '1',
+  'bofang_type' => '2',
+  'liveUrl' => '',
+  'live_notice' => '',
+  'a_win_num' => '',
+  'b_win_num' => '',
+  'id' => '',
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:51:03+08:00 ] 58.64.187.24 GET /football/game_live/livelist/bigGame_id/3/phase_id/8.html
+[ info ] h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html [运行时间：0.703134s][吞吐率：1.42req/s] [内存消耗：2,507.44kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:51:06+08:00 ] 58.64.187.24 GET /football/game_live/live/id/17.html
+[ info ] h5.phmovie.net/football/game_live/live/id/17.html [运行时间：0.383136s][吞吐率：2.61req/s] [内存消耗：2,515.34kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live.html [ array (
+  0 => 'bigGame_id',
+  1 => 'phase_id',
+  2 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:55:59+08:00 ] 58.64.187.24 GET /football/guess/guesslist/game_id/17/game_number/381.html
+[ info ] h5.phmovie.net/football/guess/guesslist/game_id/17/game_number/381.html [运行时间：0.134042s][吞吐率：7.46req/s] [内存消耗：2,525.80kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guesslist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '17',
+  'game_number' => '381',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guessList[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess_list.html [ array (
+  0 => 'list',
+  1 => 'game_id',
+  2 => 'game_number',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:56:33+08:00 ] 58.64.187.24 GET /ymq/login/index.html
+[ info ] h5.phmovie.net/ymq/login/index.html [运行时间：0.011931s][吞吐率：83.82req/s] [内存消耗：1,619.50kb] [文件加载：42]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Login->index[ /www/h5/application/ymq/controller/Login.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/ymq/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:56:38+08:00 ] 58.64.187.24 POST /ymq/login/login.html
+[ info ] h5.phmovie.net/ymq/login/login.html [运行时间：0.190818s][吞吐率：5.24req/s] [内存消耗：2,603.12kb] [文件加载：48]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\ymq\controller\Login->login[ /www/h5/application/ymq/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035927s ] mysql:host=154.223.65.38;dbname=h5_admin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.024893s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.024006s ]
+[ sql ] [ SQL ] UPDATE `admin_user`  SET `ip`='58.64.187.24',`login_time`=1540014998  WHERE  `username` = 'admin' [ RunTime:0.027608s ]
+---------------------------------------------------------------
+[ 2018-10-20T13:56:40+08:00 ] 58.64.187.24 GET /ymq/index/index.html
+[ info ] h5.phmovie.net/ymq/index/index.html [运行时间：0.471867s][吞吐率：2.12req/s] [内存消耗：2,538.84kb] [文件加载：53]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ /www/h5/application/ymq/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/h5/public/../application/ymq/view/index/index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086786s ] mysql:host=154.223.65.38;dbname=h5_admin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.059309s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.062398s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.061861s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.061164s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.061145s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.061837s ]
+---------------------------------------------------------------
+[ 2018-10-20T13:56:40+08:00 ] 58.64.187.24 GET /ymq/index/welcome.html
+[ info ] h5.phmovie.net/ymq/index/welcome.html [运行时间：0.011350s][吞吐率：88.10req/s] [内存消耗：1,560.88kb] [文件加载：41]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ /www/h5/application/ymq/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:56:42+08:00 ] 58.64.187.24 GET /football/big_Game/bigGameList
+[ info ] h5.phmovie.net/football/big_Game/bigGameList [运行时间：0.103855s][吞吐率：9.63req/s] [内存消耗：2,449.28kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'big_Game',
+    2 => 'bigGameList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\BigGame->bigGameList[ /www/h5/application/football/controller/BigGame.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/big_game/big_game_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:56:48+08:00 ] 58.64.187.24 GET /football/game_phase/phaselist/id/3.html
+[ info ] h5.phmovie.net/football/game_phase/phaselist/id/3.html [运行时间：0.096157s][吞吐率：10.40req/s] [内存消耗：2,452.41kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'phaselist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phaseList[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_phase/phase_list.html [ array (
+  0 => 'bigGame_id',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:56:51+08:00 ] 58.64.187.24 GET /football/game_live/livelist/phase_id/8/bigGame_id/3.html
+[ info ] h5.phmovie.net/football/game_live/livelist/phase_id/8/bigGame_id/3.html [运行时间：0.166112s][吞吐率：6.02req/s] [内存消耗：2,507.45kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'phase_id' => '8',
+  'bigGame_id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:57:00+08:00 ] 58.64.187.24 GET /football/game_live/live/id/17.html
+[ info ] h5.phmovie.net/football/game_live/live/id/17.html [运行时间：0.101445s][吞吐率：9.86req/s] [内存消耗：2,515.42kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/phase_id/8/bigGame_id/3.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live.html [ array (
+  0 => 'bigGame_id',
+  1 => 'phase_id',
+  2 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:57:09+08:00 ] 58.64.187.24 POST /football/game_live/live.html
+[ info ] h5.phmovie.net/football/game_live/live.html [运行时间：0.185523s][吞吐率：5.39req/s] [内存消耗：2,779.97kb] [文件加载：56]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/id/17.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '227',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'start_time' => '2018-10-20 14:00:00',
+  'is_show_index' => '1',
+  'play_a_name' => '俄罗斯',
+  'play_b_name' => '巴西',
+  'analysis_type' => '1',
+  'bofang_type' => '2',
+  'liveUrl' => '',
+  'live_notice' => '',
+  'a_win_num' => '0',
+  'b_win_num' => '2',
+  'id' => '17',
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:57:12+08:00 ] 58.64.187.24 GET /football/game_live/livelist/bigGame_id/3/phase_id/8.html
+[ info ] h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html [运行时间：0.667998s][吞吐率：1.50req/s] [内存消耗：2,512.98kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/id/17.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T13:57:48+08:00 ] 58.64.187.24 GET /football/game_live/settlement.html?id=17
+[ info ] h5.phmovie.net/football/game_live/settlement.html?id=17 [运行时间：0.405552s][吞吐率：2.47req/s] [内存消耗：2,350.77kb] [文件加载：45]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'settlement',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->settlement[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:09:26+08:00 ] 58.64.187.24 GET /football/game_live/live/id/17.html
+[ info ] h5.phmovie.net/football/game_live/live/id/17.html [运行时间：0.110492s][吞吐率：9.05req/s] [内存消耗：2,515.34kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/phase_id/8/bigGame_id/3.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live.html [ array (
+  0 => 'bigGame_id',
+  1 => 'phase_id',
+  2 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:09:40+08:00 ] 58.64.187.24 POST /football/game_live/live.html
+[ info ] h5.phmovie.net/football/game_live/live.html [运行时间：0.190581s][吞吐率：5.25req/s] [内存消耗：2,779.20kb] [文件加载：56]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/id/17.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '227',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'start_time' => '2018-10-20 14:00:00',
+  'is_show_index' => '1',
+  'play_a_name' => '俄罗斯',
+  'play_b_name' => '巴西',
+  'analysis_type' => '1',
+  'bofang_type' => '2',
+  'liveUrl' => '',
+  'live_notice' => '',
+  'a_win_num' => '2',
+  'b_win_num' => '2',
+  'id' => '17',
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:09:42+08:00 ] 58.64.187.24 GET /football/game_live/livelist/bigGame_id/3/phase_id/8.html
+[ info ] h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html [运行时间：0.429907s][吞吐率：2.33req/s] [内存消耗：2,512.77kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/live/id/17.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'bigGame_id' => '3',
+  'phase_id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:09:47+08:00 ] 58.64.187.24 GET /football/game_live/settlement.html?id=17
+[ info ] h5.phmovie.net/football/game_live/settlement.html?id=17 [运行时间：0.274997s][吞吐率：3.64req/s] [内存消耗：2,341.85kb] [文件加载：45]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'settlement',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->settlement[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:09:51+08:00 ] 58.64.187.24 GET /football/game_live/settlement.html?id=17
+[ info ] h5.phmovie.net/football/game_live/settlement.html?id=17 [运行时间：0.274231s][吞吐率：3.65req/s] [内存消耗：2,341.85kb] [文件加载：45]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'settlement',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->settlement[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:09:55+08:00 ] 58.64.187.24 GET /football/game_live/settlement.html?id=17
+[ info ] h5.phmovie.net/football/game_live/settlement.html?id=17 [运行时间：0.274091s][吞吐率：3.65req/s] [内存消耗：2,341.85kb] [文件加载：45]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'settlement',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->settlement[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:10:08+08:00 ] 58.64.187.24 GET /football/guess/guesslist/game_id/17/game_number/381.html
+[ info ] h5.phmovie.net/football/guess/guesslist/game_id/17/game_number/381.html [运行时间：0.144970s][吞吐率：6.90req/s] [内存消耗：2,525.80kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guesslist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '17',
+  'game_number' => '381',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guessList[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess_list.html [ array (
+  0 => 'list',
+  1 => 'game_id',
+  2 => 'game_number',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:10:18+08:00 ] 58.64.187.24 GET /football/game_live/livelist/phase_id/8/bigGame_id/3.html
+[ info ] h5.phmovie.net/football/game_live/livelist/phase_id/8/bigGame_id/3.html [运行时间：0.221418s][吞吐率：4.52req/s] [内存消耗：2,512.74kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'phase_id' => '8',
+  'bigGame_id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:14:56+08:00 ] 58.64.187.24 GET /football/guess/guesslist/game_id/17/game_number/381.html
+[ info ] h5.phmovie.net/football/guess/guesslist/game_id/17/game_number/381.html [运行时间：0.434703s][吞吐率：2.30req/s] [内存消耗：2,526.38kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guesslist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '17',
+  'game_number' => '381',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guessList[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess_list.html [ array (
+  0 => 'list',
+  1 => 'game_id',
+  2 => 'game_number',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:15:18+08:00 ] 58.64.187.24 GET /football/game_live/live/id/17.html
+[ info ] h5.phmovie.net/football/game_live/live/id/17.html [运行时间：0.101328s][吞吐率：9.87req/s] [内存消耗：2,515.42kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'live',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->live[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live.html [ array (
+  0 => 'bigGame_id',
+  1 => 'phase_id',
+  2 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:15:28+08:00 ] 58.64.187.24 GET /football/guess/guesslist/game_id/17/game_number/381.html
+[ info ] h5.phmovie.net/football/guess/guesslist/game_id/17/game_number/381.html [运行时间：0.142611s][吞吐率：7.01req/s] [内存消耗：2,526.38kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guesslist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '17',
+  'game_number' => '381',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guessList[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess_list.html [ array (
+  0 => 'list',
+  1 => 'game_id',
+  2 => 'game_number',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:15:30+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/34.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/34.html [运行时间：0.318609s][吞吐率：3.14req/s] [内存消耗：2,558.77kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/17/game_number/381.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '34',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:23:13+08:00 ] 117.132.183.17 GET /
+[ info ] h5.phmovie.net/ [运行时间：0.009586s][吞吐率：104.32req/s] [内存消耗：1,223.45kb] [文件加载：33]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'host' => 'h5.phmovie.net',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/h5/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:34:07+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/34.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/34.html [运行时间：0.384122s][吞吐率：2.60req/s] [内存消耗：2,559.19kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/17/game_number/381.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '34',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:34:18+08:00 ] 58.64.187.24 POST /football/guess/editguess.html
+[ info ] h5.phmovie.net/football/guess/editguess.html [运行时间：0.354252s][吞吐率：2.82req/s] [内存消耗：2,557.37kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/editguess/id/34.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '368',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '17',
+  'game_number' => '381',
+  'start_time' => '2018-10-20 13:46:59',
+  'end_time' => '2018-10-24 14:00',
+  'play_a_name' => '俄罗斯',
+  'play_b_name' => '巴西',
+  '1_winner_id' => '5.5',
+  '2_winner_id' => '1.2',
+  '3_deuce_odds' => '3.7',
+  '1_winner_rangfen' => '',
+  '1_rangfen_odds' => '',
+  '2_rangfen_odds' => '',
+  '3_winner_odds' => '',
+  'is_score' => '1',
+  '1_score_odds' => '',
+  '2_score_odds' => '',
+  'total_score' => '',
+  '1_dayu_odds' => '',
+  '2_xiaoyu_odds' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:34:27+08:00 ] 58.64.187.24 POST /football/guess/editguess.html
+[ info ] h5.phmovie.net/football/guess/editguess.html [运行时间：0.354631s][吞吐率：2.82req/s] [内存消耗：2,557.37kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/editguess/id/34.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '368',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '17',
+  'game_number' => '381',
+  'start_time' => '2018-10-20 13:46:59',
+  'end_time' => '2018-10-24 14:00',
+  'play_a_name' => '俄罗斯',
+  'play_b_name' => '巴西',
+  '1_winner_id' => '5.5',
+  '2_winner_id' => '1.2',
+  '3_deuce_odds' => '3.7',
+  '1_winner_rangfen' => '',
+  '1_rangfen_odds' => '',
+  '2_rangfen_odds' => '',
+  '3_winner_odds' => '',
+  'is_score' => '1',
+  '1_score_odds' => '',
+  '2_score_odds' => '',
+  'total_score' => '',
+  '1_dayu_odds' => '',
+  '2_xiaoyu_odds' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:41:06+08:00 ] 58.64.187.24 GET /football/guess/guess/game_id/18/game_number/382.html
+[ info ] h5.phmovie.net/football/guess/guess/game_id/18/game_number/382.html [运行时间：0.100541s][吞吐率：9.95req/s] [内存消耗：2,518.34kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '18',
+  'game_number' => '382',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess.html [ array (
+  0 => 'game_id',
+  1 => 'play_a_name',
+  2 => 'play_b_name',
+  3 => 'game_number',
+  4 => 'time',
+  5 => 'guess_end_time',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:56:16+08:00 ] 58.64.187.24 GET /football/guess/guess/game_id/18/game_number/382.html
+[ info ] h5.phmovie.net/football/guess/guess/game_id/18/game_number/382.html [运行时间：0.103608s][吞吐率：9.65req/s] [内存消耗：2,683.68kb] [文件加载：52]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '18',
+  'game_number' => '382',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess.html [ array (
+  0 => 'game_id',
+  1 => 'play_a_name',
+  2 => 'play_b_name',
+  3 => 'game_number',
+  4 => 'time',
+  5 => 'guess_end_time',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:56:25+08:00 ] 58.64.187.24 GET /football/guess/guess/game_id/18/game_number/382.html
+[ info ] h5.phmovie.net/football/guess/guess/game_id/18/game_number/382.html [运行时间：0.099460s][吞吐率：10.05req/s] [内存消耗：2,524.09kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/bigGame_id/3/phase_id/8.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '18',
+  'game_number' => '382',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess.html [ array (
+  0 => 'game_id',
+  1 => 'play_a_name',
+  2 => 'play_b_name',
+  3 => 'game_number',
+  4 => 'time',
+  5 => 'guess_end_time',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:58:52+08:00 ] 58.64.187.24 GET /ymq/index/index.html
+[ info ] h5.phmovie.net/ymq/index/index.html [运行时间：0.012144s][吞吐率：82.35req/s] [内存消耗：1,619.47kb] [文件加载：44]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/h5/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:58:53+08:00 ] 58.64.187.24 GET /ymq/login/index.html
+[ info ] h5.phmovie.net/ymq/login/index.html [运行时间：0.011848s][吞吐率：84.40req/s] [内存消耗：1,620.27kb] [文件加载：42]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Login->index[ /www/h5/application/ymq/controller/Login.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/ymq/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:59:00+08:00 ] 58.64.187.24 POST /ymq/login/login.html
+[ info ] h5.phmovie.net/ymq/login/login.html [运行时间：0.186879s][吞吐率：5.35req/s] [内存消耗：2,603.12kb] [文件加载：48]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\ymq\controller\Login->login[ /www/h5/application/ymq/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034439s ] mysql:host=154.223.65.38;dbname=h5_admin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.024010s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.023209s ]
+[ sql ] [ SQL ] UPDATE `admin_user`  SET `ip`='58.64.187.24',`login_time`=1540018740  WHERE  `username` = 'admin' [ RunTime:0.027175s ]
+---------------------------------------------------------------
+[ 2018-10-20T14:59:01+08:00 ] 58.64.187.24 GET /ymq/index/index.html
+[ info ] h5.phmovie.net/ymq/index/index.html [运行时间：0.189204s][吞吐率：5.29req/s] [内存消耗：2,538.84kb] [文件加载：53]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ /www/h5/application/ymq/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/h5/public/../application/ymq/view/index/index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033964s ] mysql:host=154.223.65.38;dbname=h5_admin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.023278s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.022561s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.022996s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.023627s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.023067s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.022575s ]
+---------------------------------------------------------------
+[ 2018-10-20T14:59:01+08:00 ] 58.64.187.24 GET /ymq/index/welcome.html
+[ info ] h5.phmovie.net/ymq/index/welcome.html [运行时间：0.011227s][吞吐率：89.07req/s] [内存消耗：1,560.88kb] [文件加载：41]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ /www/h5/application/ymq/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:59:06+08:00 ] 58.64.187.24 GET /football/big_Game/bigGameList
+[ info ] h5.phmovie.net/football/big_Game/bigGameList [运行时间：0.103271s][吞吐率：9.68req/s] [内存消耗：2,449.28kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'big_Game',
+    2 => 'bigGameList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\BigGame->bigGameList[ /www/h5/application/football/controller/BigGame.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/big_game/big_game_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:59:08+08:00 ] 58.64.187.24 GET /football/game_phase/phaselist/id/3.html
+[ info ] h5.phmovie.net/football/game_phase/phaselist/id/3.html [运行时间：0.095246s][吞吐率：10.50req/s] [内存消耗：2,452.41kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_phase',
+    2 => 'phaselist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GamePhase->phaseList[ /www/h5/application/football/controller/GamePhase.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_phase/phase_list.html [ array (
+  0 => 'bigGame_id',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:59:11+08:00 ] 58.64.187.24 GET /football/game_live/livelist/phase_id/7/bigGame_id/3.html
+[ info ] h5.phmovie.net/football/game_live/livelist/phase_id/7/bigGame_id/3.html [运行时间：0.178871s][吞吐率：5.59req/s] [内存消耗：2,507.84kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'game_live',
+    2 => 'livelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'phase_id' => '7',
+  'bigGame_id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\GameLive->liveList[ /www/h5/application/football/controller/GameLive.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/game_live/live_list.html [ array (
+  0 => 'list',
+  1 => 'bigGame_id',
+  2 => 'phase_id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:59:15+08:00 ] 58.64.187.24 GET /football/guess/guesslist/game_id/16/game_number/372.html
+[ info ] h5.phmovie.net/football/guess/guesslist/game_id/16/game_number/372.html [运行时间：0.124517s][吞吐率：8.03req/s] [内存消耗：2,532.14kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'guesslist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/game_live/livelist/phase_id/7/bigGame_id/3.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'game_id' => '16',
+  'game_number' => '372',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->guessList[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/guess_list.html [ array (
+  0 => 'list',
+  1 => 'game_id',
+  2 => 'game_number',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T14:59:17+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/33.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/33.html [运行时间：0.355547s][吞吐率：2.81req/s] [内存消耗：2,726.37kb] [文件加载：52]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/16/game_number/372.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '33',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T15:00:28+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/33.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/33.html [运行时间：0.359236s][吞吐率：2.78req/s] [内存消耗：2,726.64kb] [文件加载：52]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/16/game_number/372.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '33',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T15:02:01+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/33.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/33.html [运行时间：0.355537s][吞吐率：2.81req/s] [内存消耗：2,726.64kb] [文件加载：52]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/16/game_number/372.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '33',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T15:02:35+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/33.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/33.html [运行时间：0.371441s][吞吐率：2.69req/s] [内存消耗：2,726.64kb] [文件加载：52]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/16/game_number/372.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '33',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T15:07:20+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/33.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/33.html [运行时间：0.333078s][吞吐率：3.00req/s] [内存消耗：2,789.01kb] [文件加载：56]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/16/game_number/372.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '33',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_winner_one',
+  7 => 'guess_winner_rangfen_one',
+  8 => 'guess_is_score_one',
+  9 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: guess_list_one[/www/h5/runtime/temp/d316cfbbad2d4b78497618e3baf4935d.php:252]
+---------------------------------------------------------------
+[ 2018-10-20T15:08:25+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/33.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/33.html [运行时间：0.406822s][吞吐率：2.46req/s] [内存消耗：2,568.19kb] [文件加载：50]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/16/game_number/372.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '33',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_list_one',
+  7 => 'guess_winner_one',
+  8 => 'guess_winner_rangfen_one',
+  9 => 'guess_is_score_one',
+  10 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-20T15:09:16+08:00 ] 58.64.187.24 GET /football/guess/editguess/id/33.html
+[ info ] h5.phmovie.net/football/guess/editguess/id/33.html [运行时间：0.380691s][吞吐率：2.63req/s] [内存消耗：2,730.44kb] [文件加载：52]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'guess',
+    2 => 'editguess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/guess/guesslist/game_id/16/game_number/372.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '33',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Guess->editGuess[ /www/h5/application/football/controller/Guess.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/guess/edit_guess.html [ array (
+  0 => 'game_id',
+  1 => 'game_number',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'play_a_name',
+  5 => 'play_b_name',
+  6 => 'guess_list_one',
+  7 => 'guess_winner_one',
+  8 => 'guess_winner_rangfen_one',
+  9 => 'guess_is_score_one',
+  10 => 'guess_total_score_one',
+) ]
+[ info ] [ LOG ] INIT File

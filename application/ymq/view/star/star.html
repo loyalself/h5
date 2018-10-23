@@ -1,0 +1,120 @@
+{include file="public/meta"}
+<div class="page-container">
+    <form  method="post" class="form form-horizontal" id="add">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>中文名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="{$one.c_name}"
+                       placeholder="请输入中文名称" id="c_name" name="c_name"
+                       autocomplete="off">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">英文名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="{$one.e_name}"
+                       autocomplete="off"
+                       placeholder="请输入英文名称" id="e_name" name="e_name">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">图片：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input id="file_upload"  type="file" multiple="true" >
+
+                <img
+                        {empty name="one"}
+                            style="display: none"
+                        {/else}
+                            style="display: inline"
+                        {/empty}
+
+                     id="upload_org_code_img"
+                     src="{$one.pic?:''}"
+                     width="200" height="200">   <!--上传成功后缩略图展示-->
+
+                <input id="file_upload_image" name="pic" type="hidden" multiple="true" value="{$one.pic}">
+            </div>
+
+        </div>
+
+        <div class="mt-20 skin-minimal">
+            <label class="form-label col-xs-4 col-sm-2">性别：</label>
+
+            <div class="radio-box">
+                <input type="radio" id="radio-1" name="gender"
+                       {$one.gender == 1 ? 'checked' : ''}
+                       value="1" checked >
+                <label for="radio-1">男</label>
+            </div>
+            <div class="radio-box">
+                <input type="radio" id="radio-2" name="gender"
+                       {$one.gender == 2 ? 'checked' : ''}
+                       value="2">
+                <label for="radio-1">女</label>
+            </div>
+            <div class="radio-box">
+                <input type="radio" id="radio-3" name="gender"
+                       {$one.gender == 3 ? 'checked' : ''}
+                       value="3">
+                <label for="radio-1">无</label>
+                <span style="color: #bd362f">(注:若是国家,请选择无)</span>
+            </div>
+        </div>
+
+        <div class="row cl">
+                <div class="row cl">
+                    <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                    <input hidden value="{$one.id}" name="id">
+                    <button class="btn btn-primary radius" type="submit">
+                        <i class="Hui-iconfont">&#xe632;</i> 保存
+                    </button>
+                    <button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+        </div>
+    </form>
+</div>
+
+               {include file="public/footer"}
+
+<script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+                <script type="text/javascript">
+                  $(function ()
+                  {
+                      $('#add').validate({
+                          rules:{
+                              c_name:{
+                                  required:true,
+                                  maxlength:10
+                              },
+                          },
+                          submitHandler:function(form)
+                          {
+                              var data = $(form).serialize();
+                              url = "{:url('star/star')}";
+                              $.post(url,data,function(result)
+                              {
+                                  if(result.status == 1)   //添加成功
+                                  {
+                                      layer.msg(result.msg,{icon:1,time:2000});
+                                      setInterval("closeWindow()",2000);
+                                  }else{
+                                      layer.msg(result.msg,{icon:5,time:2000});
+                                  }
+                              },'JSON')
+                          }
+                      });
+                  });
+                  function closeWindow()
+                  {
+                      var index = parent.layer.getFrameIndex(window.name);
+                      window.parent.location.reload();
+                  }
+
+                </script>
+</body>
+</html>

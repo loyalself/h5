@@ -1,0 +1,1850 @@
+---------------------------------------------------------------
+[ 2018-10-08T16:10:58+08:00 ] 127.0.0.1 GET /ymq/index/index
+[ info ] h5.cc:8080/ymq/index/index [运行时间：0.602771s][吞吐率：1.66req/s] [内存消耗：1,649.08kb] [文件加载：44]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\laragon\www\h5\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T16:11:01+08:00 ] 127.0.0.1 GET /ymq/login/index.html
+[ info ] h5.cc:8080/ymq/login/index.html [运行时间：0.065806s][吞吐率：15.20req/s] [内存消耗：1,651.40kb] [文件加载：42]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Login->index[ E:\laragon\www\h5\application\ymq\controller\Login.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T16:11:06+08:00 ] 127.0.0.1 POST /ymq/login/login.html
+[ info ] h5.cc:8080/ymq/login/login.html [运行时间：0.279403s][吞吐率：3.58req/s] [内存消耗：2,618.20kb] [文件加载：48]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.cc:8080',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\ymq\controller\Login->login[ E:\laragon\www\h5\application\ymq\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010796s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.012794s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.005970s ]
+[ sql ] [ SQL ] UPDATE `admin_user`  SET `ip`='127.0.0.1',`login_time`=1538986266  WHERE  `username` = 'admin' [ RunTime:0.012086s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:11:07+08:00 ] 127.0.0.1 GET /ymq/index/index.html
+[ info ] h5.cc:8080/ymq/index/index.html [运行时间：0.103691s][吞吐率：9.64req/s] [内存消耗：2,568.82kb] [文件加载：53]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\index\index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001171s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.001664s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.004554s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.002256s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.000900s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:11:07+08:00 ] 127.0.0.1 GET /ymq/index/welcome.html
+[ info ] h5.cc:8080/ymq/index/welcome.html [运行时间：0.025352s][吞吐率：39.44req/s] [内存消耗：1,592.31kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T16:12:04+08:00 ] 127.0.0.1 GET /ymq/match/matchlist
+[ info ] h5.cc:8080/ymq/match/matchlist [运行时间：0.104845s][吞吐率：9.54req/s] [内存消耗：2,522.17kb] [文件加载：51]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'match',
+    2 => 'matchlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Match->matchList[ E:\laragon\www\h5\application\ymq\controller\Match.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\match\matchlist.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010024s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `big_game_list` [ RunTime:0.002218s ]
+[ sql ] [ SQL ] SELECT * FROM `big_game_list` [ RunTime:0.000427s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:12:10+08:00 ] 127.0.0.1 GET /ymq/match/addmatch/id/3.html
+[ info ] h5.cc:8080/ymq/match/addmatch/id/3.html [运行时间：0.067340s][吞吐率：14.85req/s] [内存消耗：2,521.84kb] [文件加载：51]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'match',
+    2 => 'addmatch',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/match/matchlist',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ RUN ] app\ymq\controller\Match->addMatch[ E:\laragon\www\h5\application\ymq\controller\Match.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\match\addmatch.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010054s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `big_game_list` [ RunTime:0.001628s ]
+[ sql ] [ SQL ] SELECT * FROM `big_game_list` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000474s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:12:13+08:00 ] 127.0.0.1 GET /ymq/game_phase/phaselist/id/3.html
+[ info ] h5.cc:8080/ymq/game_phase/phaselist/id/3.html [运行时间：0.097120s][吞吐率：10.30req/s] [内存消耗：2,524.52kb] [文件加载：51]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'game_phase',
+    2 => 'phaselist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ RUN ] app\ymq\controller\GamePhase->phaseList[ E:\laragon\www\h5\application\ymq\controller\GamePhase.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\game_phase\phase_list.html [ array (
+  0 => 'bigGame_id',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011412s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `game_phase` [ RunTime:0.001873s ]
+[ sql ] [ SQL ] SELECT * FROM `game_phase` WHERE  `bigGame_id` = 3 [ RunTime:0.000573s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:43:16+08:00 ] 127.0.0.1 GET /ymq/index/index.html
+[ info ] h5.cc:8080/ymq/index/index.html [运行时间：0.055810s][吞吐率：17.92req/s] [内存消耗：2,569.07kb] [文件加载：53]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\index\index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001298s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.001887s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.002443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.001708s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.000932s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:43:16+08:00 ] 127.0.0.1 GET /ymq/index/welcome.html
+[ info ] h5.cc:8080/ymq/index/welcome.html [运行时间：0.030288s][吞吐率：33.02req/s] [内存消耗：1,592.31kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T16:43:22+08:00 ] 127.0.0.1 GET /ymq/batch_Del/userList
+[ info ] h5.cc:8080/ymq/batch_Del/userList [运行时间：0.215395s][吞吐率：4.64req/s] [内存消耗：2,651.73kb] [文件加载：53]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'batch_Del',
+    2 => 'userList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\BatchDel->userList[ E:\laragon\www\h5\application\ymq\controller\BatchDel.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\batch_del\user_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010777s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `batchdel` [ RunTime:0.002144s ]
+[ sql ] [ SQL ] SELECT * FROM `batchdel` [ RunTime:0.000400s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:43:29+08:00 ] 127.0.0.1 GET /ymq/index/index.html
+[ info ] h5.cc:8080/ymq/index/index.html [运行时间：0.052119s][吞吐率：19.19req/s] [内存消耗：2,569.07kb] [文件加载：53]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\index\index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001461s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.001764s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.002035s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.001535s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.000470s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:43:29+08:00 ] 127.0.0.1 GET /ymq/index/welcome.html
+[ info ] h5.cc:8080/ymq/index/welcome.html [运行时间：0.025029s][吞吐率：39.95req/s] [内存消耗：1,592.31kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T16:43:32+08:00 ] 127.0.0.1 GET /ymq/batch_Del/userList
+[ info ] h5.cc:8080/ymq/batch_Del/userList [运行时间：0.053835s][吞吐率：18.58req/s] [内存消耗：2,508.46kb] [文件加载：51]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'batch_Del',
+    2 => 'userList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\BatchDel->userList[ E:\laragon\www\h5\application\ymq\controller\BatchDel.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\batch_del\user_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010754s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `batchdel` [ RunTime:0.001679s ]
+[ sql ] [ SQL ] SELECT * FROM `batchdel` [ RunTime:0.000511s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:43:36+08:00 ] 127.0.0.1 GET /ymq/post_Card/postList
+[ info ] h5.cc:8080/ymq/post_Card/postList [运行时间：0.148417s][吞吐率：6.74req/s] [内存消耗：1,638.63kb] [文件加载：45]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'post_Card',
+    2 => 'postList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\PostCard->postList[ E:\laragon\www\h5\application\ymq\controller\PostCard.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\ymq\controller\PostCard::$db[E:\laragon\www\h5\application\ymq\controller\PostCard.php:18]
+---------------------------------------------------------------
+[ 2018-10-08T16:43:40+08:00 ] 127.0.0.1 GET /ymq/collection/collecList
+[ info ] h5.cc:8080/ymq/collection/collecList [运行时间：0.367241s][吞吐率：2.72req/s] [内存消耗：2,483.34kb] [文件加载：49]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'collection',
+    2 => 'collecList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Collection->collecList[ E:\laragon\www\h5\application\ymq\controller\Collection.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\collection\collec_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:17:04+08:00 ] 127.0.0.1 GET /ymq/match/matchlist
+[ info ] h5.cc:8080/ymq/match/matchlist [运行时间：0.040299s][吞吐率：24.81req/s] [内存消耗：1,655.29kb] [文件加载：44]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'match',
+    2 => 'matchlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\laragon\www\h5\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:17:05+08:00 ] 127.0.0.1 GET /ymq/login/index.html
+[ info ] h5.cc:8080/ymq/login/index.html [运行时间：0.025128s][吞吐率：39.80req/s] [内存消耗：1,651.40kb] [文件加载：42]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/match/matchlist',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Login->index[ E:\laragon\www\h5\application\ymq\controller\Login.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:17:09+08:00 ] 127.0.0.1 POST /ymq/login/login.html
+[ info ] h5.cc:8080/ymq/login/login.html [运行时间：0.119310s][吞吐率：8.38req/s] [内存消耗：2,618.20kb] [文件加载：48]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.cc:8080',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\ymq\controller\Login->login[ E:\laragon\www\h5\application\ymq\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001275s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.002078s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000510s ]
+[ sql ] [ SQL ] UPDATE `admin_user`  SET `ip`='127.0.0.1',`login_time`=1538990229  WHERE  `username` = 'admin' [ RunTime:0.004648s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:17:10+08:00 ] 127.0.0.1 GET /ymq/index/index.html
+[ info ] h5.cc:8080/ymq/index/index.html [运行时间：0.044833s][吞吐率：22.31req/s] [内存消耗：2,568.82kb] [文件加载：53]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\index\index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001055s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.001713s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.002062s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.001552s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.000464s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:17:11+08:00 ] 127.0.0.1 GET /ymq/index/welcome.html
+[ info ] h5.cc:8080/ymq/index/welcome.html [运行时间：0.025882s][吞吐率：38.64req/s] [内存消耗：1,592.31kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:17:13+08:00 ] 127.0.0.1 GET /ymq/match/matchlist
+[ info ] h5.cc:8080/ymq/match/matchlist [运行时间：0.044416s][吞吐率：22.51req/s] [内存消耗：2,522.17kb] [文件加载：51]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'match',
+    2 => 'matchlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Match->matchList[ E:\laragon\www\h5\application\ymq\controller\Match.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\match\matchlist.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010104s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `big_game_list` [ RunTime:0.001883s ]
+[ sql ] [ SQL ] SELECT * FROM `big_game_list` [ RunTime:0.000509s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:30:21+08:00 ] 127.0.0.1 GET /ymq/login/logout.html
+[ info ] h5.cc:8080/ymq/login/logout.html [运行时间：0.058656s][吞吐率：17.05req/s] [内存消耗：1,613.80kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Login->logout[ E:\laragon\www\h5\application\ymq\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:30:21+08:00 ] 127.0.0.1 GET /ymq/login/index.html
+[ info ] h5.cc:8080/ymq/login/index.html [运行时间：0.031457s][吞吐率：31.79req/s] [内存消耗：1,651.40kb] [文件加载：42]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Login->index[ E:\laragon\www\h5\application\ymq\controller\Login.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:30:26+08:00 ] 127.0.0.1 POST /ymq/login/login.html
+[ info ] h5.cc:8080/ymq/login/login.html [运行时间：0.117244s][吞吐率：8.53req/s] [内存消耗：2,618.20kb] [文件加载：48]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.cc:8080',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\ymq\controller\Login->login[ E:\laragon\www\h5\application\ymq\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001400s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000700s ]
+[ sql ] [ SQL ] UPDATE `admin_user`  SET `ip`='127.0.0.1',`login_time`=1538991026  WHERE  `username` = 'admin' [ RunTime:0.003358s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:30:27+08:00 ] 127.0.0.1 GET /ymq/index/index.html
+[ info ] h5.cc:8080/ymq/index/index.html [运行时间：0.050804s][吞吐率：19.68req/s] [内存消耗：2,568.82kb] [文件加载：53]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\index\index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001157s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.002466s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.002494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.001764s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.000410s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:30:27+08:00 ] 127.0.0.1 GET /ymq/index/welcome.html
+[ info ] h5.cc:8080/ymq/index/welcome.html [运行时间：0.027543s][吞吐率：36.31req/s] [内存消耗：1,592.31kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:30:29+08:00 ] 127.0.0.1 GET /ymq/match/matchlist
+[ info ] h5.cc:8080/ymq/match/matchlist [运行时间：0.049795s][吞吐率：20.08req/s] [内存消耗：2,522.17kb] [文件加载：51]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'match',
+    2 => 'matchlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Match->matchList[ E:\laragon\www\h5\application\ymq\controller\Match.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\match\matchlist.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010087s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `big_game_list` [ RunTime:0.001848s ]
+[ sql ] [ SQL ] SELECT * FROM `big_game_list` [ RunTime:0.000442s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:30:31+08:00 ] 127.0.0.1 GET /ymq/match/matchlive
+[ info ] h5.cc:8080/ymq/match/matchlive [运行时间：0.026179s][吞吐率：38.20req/s] [内存消耗：1,597.55kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'match',
+    2 => 'matchlive',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Match->matchLive[ E:\laragon\www\h5\application\ymq\controller\Match.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:30:32+08:00 ] 127.0.0.1 GET /ymq/match/matchother
+[ info ] h5.cc:8080/ymq/match/matchother [运行时间：0.028746s][吞吐率：34.79req/s] [内存消耗：1,597.57kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'match',
+    2 => 'matchother',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Match->matchOther[ E:\laragon\www\h5\application\ymq\controller\Match.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:32:51+08:00 ] 127.0.0.1 GET /ymq/information/informationlist
+[ info ] h5.cc:8080/ymq/information/informationlist [运行时间：0.417998s][吞吐率：2.39req/s] [内存消耗：2,568.10kb] [文件加载：52]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:32:56+08:00 ] 127.0.0.1 GET /ymq/index/index.html
+[ info ] h5.cc:8080/ymq/index/index.html [运行时间：0.072370s][吞吐率：13.82req/s] [内存消耗：2,569.07kb] [文件加载：53]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\index\index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011526s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.001913s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.002270s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.001622s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.000424s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:32:56+08:00 ] 127.0.0.1 GET /ymq/index/welcome.html
+[ info ] h5.cc:8080/ymq/index/welcome.html [运行时间：0.026505s][吞吐率：37.73req/s] [内存消耗：1,592.31kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:32:59+08:00 ] 127.0.0.1 GET /ymq/information/informationlist
+[ info ] h5.cc:8080/ymq/information/informationlist [运行时间：0.349677s][吞吐率：2.86req/s] [内存消耗：2,568.10kb] [文件加载：52]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:33:08+08:00 ] 127.0.0.1 GET /ymq/information/informationlist
+[ info ] h5.cc:8080/ymq/information/informationlist [运行时间：0.712246s][吞吐率：1.40req/s] [内存消耗：2,568.35kb] [文件加载：52]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:33:11+08:00 ] 127.0.0.1 GET /ymq/information/bootstrap.min.css.map
+[ info ] h5.cc:8080/ymq/information/bootstrap.min.css.map [运行时间：0.041878s][吞吐率：23.88req/s] [内存消耗：1,822.46kb] [文件加载：46]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'bootstrap.min.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:33:55+08:00 ] 127.0.0.1 GET /
+[ info ] h5.cc:8080/ [运行时间：0.051972s][吞吐率：19.24req/s] [内存消耗：1,250.84kb] [文件加载：33]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\laragon\www\h5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:34:00+08:00 ] 127.0.0.1 GET /ymq/information/informationlist
+[ info ] h5.cc:8080/ymq/information/informationlist [运行时间：1.033965s][吞吐率：0.97req/s] [内存消耗：2,568.35kb] [文件加载：52]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:34:51+08:00 ] 127.0.0.1 GET /ymq/information/informationlist
+[ info ] h5.cc:8080/ymq/information/informationlist [运行时间：0.448349s][吞吐率：2.23req/s] [内存消耗：2,724.59kb] [文件加载：54]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:34:56+08:00 ] 127.0.0.1 GET /ymq/information/informationlist
+[ info ] h5.cc:8080/ymq/information/informationlist [运行时间：0.377503s][吞吐率：2.65req/s] [内存消耗：2,568.35kb] [文件加载：52]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:34:59+08:00 ] 127.0.0.1 GET /ymq/information/informationlist?page=2
+[ info ] h5.cc:8080/ymq/information/informationlist?page=2 [运行时间：0.280248s][吞吐率：3.57req/s] [内存消耗：2,570.36kb] [文件加载：52]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/information/informationlist',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:00+08:00 ] 127.0.0.1 GET /ymq/information/informationlist?page=3
+[ info ] h5.cc:8080/ymq/information/informationlist?page=3 [运行时间：0.288185s][吞吐率：3.47req/s] [内存消耗：2,575.79kb] [文件加载：52]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/information/informationlist?page=2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:01+08:00 ] 127.0.0.1 GET /ymq/information/informationlist?page=4
+[ info ] h5.cc:8080/ymq/information/informationlist?page=4 [运行时间：0.351369s][吞吐率：2.85req/s] [内存消耗：2,577.11kb] [文件加载：52]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/information/informationlist?page=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:14+08:00 ] 127.0.0.1 GET /ymq/information/add.html
+[ info ] h5.cc:8080/ymq/information/add.html [运行时间：0.288575s][吞吐率：3.47req/s] [内存消耗：2,673.55kb] [文件加载：51]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->add[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\add.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:25+08:00 ] 127.0.0.1 GET /ymq/index/index.html
+[ info ] h5.cc:8080/ymq/index/index.html [运行时间：0.059739s][吞吐率：16.74req/s] [内存消耗：2,569.07kb] [文件加载：53]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\index\index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001241s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.001526s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.002835s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.002109s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.000446s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:35:25+08:00 ] 127.0.0.1 GET /ymq/index/welcome.html
+[ info ] h5.cc:8080/ymq/index/welcome.html [运行时间：0.027315s][吞吐率：36.61req/s] [内存消耗：1,592.31kb] [文件加载：41]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ E:\laragon\www\h5\application\ymq\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:29+08:00 ] 127.0.0.1 GET /ymq/information/informationlist
+[ info ] h5.cc:8080/ymq/information/informationlist [运行时间：0.386739s][吞吐率：2.59req/s] [内存消耗：2,724.34kb] [文件加载：54]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'informationlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->informationList[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:30+08:00 ] 127.0.0.1 GET /ymq/information/add.html
+[ info ] h5.cc:8080/ymq/information/add.html [运行时间：0.210427s][吞吐率：4.75req/s] [内存消耗：2,505.14kb] [文件加载：49]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\ymq\controller\Information->add[ E:\laragon\www\h5\application\ymq\controller\Information.php ]
+[ info ] [ VIEW ] E:\laragon\www\h5\public/../application/ymq\view\information\add.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:31+08:00 ] 127.0.0.1 GET /ymq/information/
+[ info ] h5.cc:8080/ymq/information/ [运行时间：0.029177s][吞吐率：34.27req/s] [内存消耗：1,823.77kb] [文件加载：46]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/information/add.html',
+  'accept' => '*/*',
+  'x-requested-with' => 'ShockwaveFlash/31.0.0.108',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:31+08:00 ] 127.0.0.1 GET /ymq/information/
+[ info ] h5.cc:8080/ymq/information/ [运行时间：0.027512s][吞吐率：36.35req/s] [内存消耗：1,823.77kb] [文件加载：46]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/information/add.html',
+  'accept' => '*/*',
+  'x-requested-with' => 'ShockwaveFlash/31.0.0.108',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:31+08:00 ] 127.0.0.1 GET /ymq/information/
+[ info ] h5.cc:8080/ymq/information/ [运行时间：0.040813s][吞吐率：24.50req/s] [内存消耗：1,823.77kb] [文件加载：46]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/information/add.html',
+  'accept' => '*/*',
+  'x-requested-with' => 'ShockwaveFlash/31.0.0.108',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:31+08:00 ] 127.0.0.1 GET /ymq/information/
+[ info ] h5.cc:8080/ymq/information/ [运行时间：0.029936s][吞吐率：33.40req/s] [内存消耗：1,823.77kb] [文件加载：46]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/information/add.html',
+  'accept' => '*/*',
+  'x-requested-with' => 'ShockwaveFlash/31.0.0.108',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:31+08:00 ] 127.0.0.1 GET /ymq/information/
+[ info ] h5.cc:8080/ymq/information/ [运行时间：0.025096s][吞吐率：39.85req/s] [内存消耗：1,823.77kb] [文件加载：46]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/information/add.html',
+  'accept' => '*/*',
+  'x-requested-with' => 'ShockwaveFlash/31.0.0.108',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T17:35:31+08:00 ] 127.0.0.1 GET /ymq/information/
+[ info ] h5.cc:8080/ymq/information/ [运行时间：0.025841s][吞吐率：38.70req/s] [内存消耗：1,823.77kb] [文件加载：46]
+[ info ] [ LANG ] E:\laragon\www\h5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'information',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1536726899,1536911144,1536981753; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.cc:8080/ymq/information/add.html',
+  'accept' => '*/*',
+  'x-requested-with' => 'ShockwaveFlash/31.0.0.108',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'h5.cc:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File

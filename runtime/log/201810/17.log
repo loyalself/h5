@@ -1,0 +1,209 @@
+---------------------------------------------------------------
+[ 2018-10-17T16:55:51+08:00 ] 58.64.187.24 GET /ymq/login/index.html
+[ info ] h5.phmovie.net/ymq/login/index.html [运行时间：0.012149s][吞吐率：82.31req/s] [内存消耗：1,619.49kb] [文件加载：42]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Login->index[ /www/h5/application/ymq/controller/Login.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/ymq/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-17T16:55:57+08:00 ] 58.64.187.24 POST /ymq/login/login.html
+[ info ] h5.phmovie.net/ymq/login/login.html [运行时间：0.184649s][吞吐率：5.42req/s] [内存消耗：2,603.12kb] [文件加载：48]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://h5.phmovie.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\ymq\controller\Login->login[ /www/h5/application/ymq/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033550s ] mysql:host=154.223.65.38;dbname=h5_admin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.023716s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.022803s ]
+[ sql ] [ SQL ] UPDATE `admin_user`  SET `ip`='58.64.187.24',`login_time`=1539766557  WHERE  `username` = 'admin' [ RunTime:0.026412s ]
+---------------------------------------------------------------
+[ 2018-10-17T16:55:58+08:00 ] 58.64.187.24 GET /ymq/index/index.html
+[ info ] h5.phmovie.net/ymq/index/index.html [运行时间：0.188494s][吞吐率：5.31req/s] [内存消耗：2,538.84kb] [文件加载：53]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->index[ /www/h5/application/ymq/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/h5/public/../application/ymq/view/index/index.html [ array (
+  0 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032947s ] mysql:host=154.223.65.38;dbname=h5_admin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_user` [ RunTime:0.023192s ]
+[ sql ] [ SQL ] SELECT `id` FROM `admin_user` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.022716s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`group_id`,`c`.`rules` FROM `admin_user` `a` INNER JOIN `admin_group_access` `b` ON `a`.`id`=`b`.`uid` INNER JOIN `admin_role_group` `c` ON `b`.`group_id`=`c`.`id` WHERE  `a`.`id` = 1 LIMIT 1 [ RunTime:0.022789s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_rule` [ RunTime:0.023430s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id = 0 ) ORDER BY `id` ASC [ RunTime:0.022688s ]
+[ sql ] [ SQL ] SELECT * FROM `admin_rule` WHERE  (  p_id != 0 and is_show = 1 ) ORDER BY `id` ASC [ RunTime:0.023236s ]
+---------------------------------------------------------------
+[ 2018-10-17T16:55:58+08:00 ] 58.64.187.24 GET /ymq/index/welcome.html
+[ info ] h5.phmovie.net/ymq/index/welcome.html [运行时间：0.011232s][吞吐率：89.03req/s] [内存消耗：1,560.88kb] [文件加载：41]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ymq',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\ymq\controller\Index->welcome[ /www/h5/application/ymq/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-17T16:56:00+08:00 ] 58.64.187.24 GET /football/star/starList
+[ info ] h5.phmovie.net/football/star/starList [运行时间：0.112807s][吞吐率：8.86req/s] [内存消耗：2,704.34kb] [文件加载：56]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'star',
+    2 => 'starList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/ymq/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Star->starList[ /www/h5/application/football/controller/Star.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/star/star_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-17T16:56:05+08:00 ] 58.64.187.24 GET /football/star/starList?page=2
+[ info ] h5.phmovie.net/football/star/starList?page=2 [运行时间：0.122382s][吞吐率：8.17req/s] [内存消耗：2,539.63kb] [文件加载：54]
+[ info ] [ LANG ] /www/h5/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'football',
+    1 => 'star',
+    2 => 'starList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1776662528; pgv_si=s522431488; username=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://h5.phmovie.net/football/star/starList',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'h5.phmovie.net',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\football\controller\Star->starList[ /www/h5/application/football/controller/Star.php ]
+[ info ] [ VIEW ] /www/h5/public/../application/football/view/star/star_list.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
