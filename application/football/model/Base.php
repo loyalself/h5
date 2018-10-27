@@ -14,7 +14,6 @@ use think\Model;
 class Base extends Model
 {
     protected $connection = 'mysql://root:Yd12345678.@154.223.65.38:3306/football#utf8';
-    //protected $connection = 'mysql://root:@127.0.0.1:3306/football#utf8';
 
     protected $autoWriteTimestamp = true;
 

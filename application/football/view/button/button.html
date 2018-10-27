@@ -1,0 +1,92 @@
+{include file="public/meta"}
+<article class="page-container">
+    <form class="form form-horizontal" id="add-phase" method="post">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标题：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="{$one.title}" placeholder="请输入控制标题" id="title" name="title">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>控制标识：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text"
+                       value="{$one.sign}" placeholder="请输入标识"
+                       id="sign" name="sign">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">是否展示：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <span class="select-box" style="width:150px;">
+			         <select class="select" name="status" size="1">
+					    <option value="">选择开启状态</option>
+                        <option value="1" {$one.status == 1 ? 'selected' :''}>展示</option>
+                         <option value="2" {$one.status == 2 ? 'selected' :''}>不展示</option>
+			        </select>
+			    </span>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input hidden value="{$one.id}" name="id">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+                <!--<input class="btn btn-primary radius" type="button"  onclick="closeWindow()" value="&nbsp;&nbsp;返回&nbsp;&nbsp;">-->
+            </div>
+        </div>
+    </form>
+</article>
+
+<!--_footer 作为公共模版分离出去-->
+{include file="public/footer"}
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#add-phase").validate({
+            rules:{
+                phasegame_name:{
+                    required:true,
+                    minlength:2,
+                    maxlength:16
+                },
+                is_end:{
+                    required:true
+                },
+                // game_number_win:{
+                //   required:true,
+                //     number:true,            //只要数字
+                //     digits:true           //必须是一个非负整数
+                // }
+            },
+            submitHandler:function(form)
+            {
+                var data = $(form).serialize();  //获取表单里的数据
+                url = "{:url('button/button')}";
+                $.post(url,data,function(result)
+                {
+                    if(result.code == 1)   //添加成功
+                    {
+                        layer.msg(result.msg,{icon:1,time:2000});
+                        setInterval("closeWindow()",2000);
+                    }else{
+                        layer.msg(result.msg,{icon:5,time:2000});
+                    }
+                },'JSON')
+            }
+        });
+    });
+    function closeWindow()
+    {
+        var index = parent.layer.getFrameIndex(window.name);
+        window.parent.location.reload();
+    }
+</script>
+
+</body>
+</html>
