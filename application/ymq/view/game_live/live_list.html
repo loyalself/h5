@@ -25,10 +25,10 @@
             <i class="Hui-iconfont">&#xe600;</i> 添加比赛
         </a>
 
-			 <a class="btn btn-primary radius"
-                onclick='' href="javascript:;">
-            <i class="Hui-iconfont">&#xe600;</i> 开启全部竞猜
-            </a>
+			 <!--<a class="btn btn-primary radius"-->
+                <!--onclick='' href="javascript:;">-->
+            <!--<i class="Hui-iconfont">&#xe600;</i> 开启全部竞猜-->
+            <!--</a>-->
 
 
     </div>
@@ -36,14 +36,15 @@
     <table class="table table-border table-bg">
         <thead>
         <tr class="text-c">
-            <th width="40">场次编号</th>
-            <th width="100">比赛名称</th>
-            <th width="100">开始时间</th>
-            <th width="100">是否有直播</th>
-            <th width="100">对战人员</th>
-            <th width="100">比分</th>
-            <th width="100">胜利者</th>
-            <th width="100">操作</th>
+            <th>场次编号</th>
+            <th>比赛名称</th>
+            <th>开始时间</th>
+            <th>是否有直播</th>
+            <th>对战人员</th>
+            <th>比分</th>
+            <th>胜利者</th>
+            <th>结算</th>
+            <th>操作</th>
         </tr>
         </thead>
         <tbody>
@@ -62,6 +63,27 @@
             <td>{$v.who_beat_who}</td>
             <td>{$v.a_win_num}/{$v.b_win_num}</td>
             <td class="td-status">{$v.winner}</td>
+            <td>
+                {if condition="$v.is_end eq 3 && $v.isSettlement eq 0"}
+                <a href="javascript:;"
+                   onclick="Settlement('{$v.id}')"
+                   class="btn btn-warning btn-lg radius"
+                   role="button">结算
+                </a>
+                {elseif condition="$v.isSettlement eq 1"}
+                <a href="#" class="btn btn-default btn-lg disabled radius" role="button">
+                    已结算
+                </a>
+                {elseif condition="$v.is_end eq 4"}
+                <a href="#" class="btn btn-default btn-lg disabled radius" role="button">
+                    已结算
+                </a>
+                {elseif condition="$v.is_end neq 3"}
+                <a href="#" class="btn btn-default btn-lg disabled radius" role="button">
+                    结算
+                </a>
+                {/if}
+            </td>
             <td class="td-manage">
               <!--  <a class="btn btn-primary radius"
                    data-title="编辑"

@@ -145,45 +145,46 @@ class GameLive extends Common
             }
 
             //一定要编辑比赛时,is_end 为4就代表当前比赛弃赛,直接退钱
-            if(!empty($post['id']) && $post['is_end'] == 4)
+            if(!empty($post['id']) && !empty($post['is_end']))
             {
-                $ctime = time();
-                $game_id = $post['id'];
-                $qisai_data = $this->db->table('guess_userbet')->where('isWin',0)
-                    ->where('game_id',$game_id)->where('bet_status',1)->select();
-                if(!empty($qisai_data))
+                if($post['is_end'] == 4)
                 {
-                    foreach ($qisai_data as $k=>$v)
-                    {
-                        $user_id = $v['uid'];
-                        $wager = $v['wager'];
-                        $jc_type = $v['jc_type'];
-                        //直接退钱
-                        try{
-                            $sql = "update userinfo set recharge_amount = recharge_amount + $wager,
-                            total_amount=total_amount+$wager where id = $user_id limit 1";
-                            $res = $this->db->execute($sql);
-                        }catch (\Exception $e){
-                            return $this->error($e->getMessage(),0);
-                        }
-                        //插入信息到弃赛表
-                        try{
-                            $sql = "insert into guess_qisai (user_id, game_id,wager,jc_type,ctime) 
-					        values ($user_id,$game_id,$wager,$jc_type,$ctime)";
-                            $res = $this->db->execute($sql);
-                        } catch (\Exception $e){
-                            return $this->error($e->getMessage(),0);
+                    $ctime = time();
+                    $game_id = $post['id'];
+                    $qisai_data = $this->db->table('guess_userbet')->where('isWin', 0)
+                        ->where('game_id', $game_id)->where('bet_status', 1)->select();
+                    if (!empty($qisai_data)) {
+                        foreach ($qisai_data as $k => $v) {
+                            $user_id = $v['uid'];
+                            $wager = $v['wager'];
+                            $jc_type = $v['jc_type'];
+                            //直接退钱
+                            try {
+                                $sql = "update userinfo set recharge_amount = recharge_amount + $wager,
+                                total_amount=total_amount+$wager where id = $user_id limit 1";
+                                $res = $this->db->execute($sql);
+                            } catch (\Exception $e) {
+                                return $this->error($e->getMessage(), 0);
+                            }
+                            //插入信息到弃赛表
+                            try {
+                                $sql = "insert into guess_qisai (user_id, game_id,wager,jc_type,ctime) 
+					            values ($user_id,$game_id,$wager,$jc_type,$ctime)";
+                                $res = $this->db->execute($sql);
+                            } catch (\Exception $e) {
+                                return $this->error($e->getMessage(), 0);
+                            }
                         }
                     }
-                }
-                try{
-                    //更新比赛状态为流局
-                    $sql = "update guess_userbet set isWin=3,isSettlement=1,mtime='{$ctime}' where game_id='{$game_id}'";
-                    $res = $this->db->execute($sql);
-                } catch (\Exception $e){
-                    return $this->error($e->getMessage(),0);
-                }
 
+                    try {
+                        //更新比赛状态为流局
+                        $sql = "update guess_userbet set isWin=3,isSettlement=1,mtime='{$ctime}' where game_id='{$game_id}'";
+                        $res = $this->db->execute($sql);
+                    } catch (\Exception $e) {
+                        return $this->error($e->getMessage(), 0);
+                    }
+                }
             }
 
             //添加或修改比赛数据

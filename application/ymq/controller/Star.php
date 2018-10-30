@@ -15,7 +15,7 @@ class Star extends BaseController
      */
     public function index()
     {
-        $list = Db::table('star_list')->select();
+        $list = Db::table('star_list')->paginate(10);
         return view('',['list'=>$list]);
     }
 

@@ -53,8 +53,8 @@
             <td>{$v.phasegame_name}</td>
             <td>{:date("Y-m-d H:i:s",$v.start_time)}</td>
             <td>{:date("Y-m-d H:i:s",$v.end_time)}</td>
-            <td>0</td>
-            <td>0</td>
+            <td>{$v.betting_allcount}</td>
+            <td>{$v.win_count}/{$v.loss_count}</td>
             <td>查看单选</td>
             <td>
               <!--  <a class="btn btn-primary radius"
@@ -65,18 +65,18 @@
                 </a>-->
 
                 <a class="btn btn-primary radius"
-                   onclick='edit_guess("{:url('guess/guess',['id'=>$v.id])}")' href="javascript:;">
+                   onclick='edit_guess("{:url('guess/editguess',['id'=>$v.id])}")' href="javascript:;">
                     编辑竞猜
                 </a>
 
 
-                {if condition="$v.status == 1 && $v.manual_open == 1"}
-                    <a href="javascript:;" class="btn btn-success radius"
-                       onclick="manual_close('{$v.id}')">已开启</a>
-                {else}
-                    <a href="javascript:;" class="btn btn-default radius"
-                       onclick="manual_open('{$v.id}')">未开启</a>
-                {/if}
+                <!--{if condition="$v.status == 1 && $v.manual_open == 1"}-->
+                    <!--<a href="javascript:;" class="btn btn-success radius"-->
+                       <!--onclick="manual_close('{$v.id}')">已开启</a>-->
+                <!--{else}-->
+                    <!--<a href="javascript:;" class="btn btn-default radius"-->
+                       <!--onclick="manual_open('{$v.id}')">未开启</a>-->
+                <!--{/if}-->
                 <!--<a href="javascript;" style="color: #2a58ee;font-size: 16px">关闭</a>-->
                 <a title="删除" href="javascript:;" onclick="del(this,'{$v.id}')" class="btn btn-danger radius" style="text-decoration:none">删除</a>
             </td>

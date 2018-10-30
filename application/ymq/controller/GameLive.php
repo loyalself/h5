@@ -11,9 +11,17 @@ namespace app\ymq\controller;
 
 use app\common\BaseController;
 use think\Db;
+use JMessage\JMessage;
+use JMessage\IM\ChatRoom;
 class GameLive extends BaseController
 {
     private $tableName = 'game_live';
+    //极光开发账号,创建聊天室用
+    private $appKey = '89e7574f3a1c28e6c1ecb9ce';
+
+    private $masterSecret = '5efc3d5d44723d692fd5f1ea';
+
+    private $owner = 'root';
 
     /**
      * 查看赛程列表,这里具体到某一场比赛
@@ -32,6 +40,18 @@ class GameLive extends BaseController
         {
             //查看当前比赛有无竞猜,比赛表里的主键id关联竞猜表里的game_id
             $game_id = $v['id'];
+            //查询当前比赛是否已经结算  isSettlement 1代表已经结算 0代表未结算
+            $isSettlement = Db::table('guess_userbet')
+                ->where('game_id',$game_id)
+                ->where('bet_status',1)
+                ->value('isSettlement');
+            if($isSettlement)
+            {
+                $list[$k]['isSettlement'] = $isSettlement;
+            }else{
+                $list[$k]['isSettlement'] = 0;
+            }
+            //查询当前比赛是否有竞猜
             $is_guess = Db::table('guess_list')->where('game_id',$game_id)->find();
             if($is_guess)
             {
@@ -104,6 +124,68 @@ class GameLive extends BaseController
                 }
             }
 
+            //判断是否有直播源 isLive 1有  2无
+            if(!empty($post['liveUrl']))
+            {
+                $name = 'ft'.time();
+                $description = $post['live_notice'] ?:'';
+                $roomId = $this->genrateChatRoomId($name,$description);
+                if(!$roomId)
+                {
+                    return $this->error('聊天室创建失败');
+                }
+                $post['roomId'] = $roomId;
+                $post['live_notice'] = $description;
+                $post['isLive'] = 1;
+            }else{
+                $post['isLive'] = 2;
+            }
+
+            //一定要编辑比赛时,is_end 为4就代表当前比赛弃赛,直接退钱
+            if(!empty($post['id']) && !empty($post['is_end']))
+            {
+                if($post['is_end'] == 4)
+                {
+                    $ctime = time();
+                    $game_id = $post['id'];
+                    $qisai_data = Db::table('guess_userbet')->where('isWin', 0)
+                        ->where('game_id', $game_id)->where('bet_status', 1)->select();
+                    if (!empty($qisai_data))
+                    {
+                        foreach ($qisai_data as $k => $v)
+                        {
+                            $user_id = $v['uid'];
+                            $wager = $v['wager'];
+                            $jc_type = $v['jc_type'];
+                            //直接退钱
+                            try {
+                                $sql = "update userinfo set recharge_amount = recharge_amount + $wager,
+                            total_amount=total_amount+$wager where id = $user_id limit 1";
+                                $res = Db::execute($sql);
+                            } catch (\Exception $e) {
+                                return $this->error($e->getMessage(), 0);
+                            }
+                            //插入信息到弃赛表
+                            try {
+                                $sql = "insert into guess_qisai (user_id, game_id,wager,jc_type,ctime) 
+					        values ($user_id,$game_id,$wager,$jc_type,$ctime)";
+                                $res = Db::execute($sql);
+                            } catch (\Exception $e) {
+                                return $this->error($e->getMessage(), 0);
+                            }
+                        }
+                    }
+                    try {
+                        //更新比赛状态为流局
+                        $sql = "update guess_userbet set isWin=3,isSettlement=1,mtime='{$ctime}' where game_id='{$game_id}'";
+                        $res = Db::execute($sql);
+                    } catch (\Exception $e) {
+                        return $this->error($e->getMessage(), 0);
+                    }
+                }
+            }
+
+            //添加比赛
             try{
                 $id = model('GameLive')->addLive($post);  //成功后的主键id
             }catch (\Exception $e){
@@ -144,6 +226,24 @@ class GameLive extends BaseController
     }
 
     /**
+     * @param $name  聊天室名称,唯一的才能生成不同的聊天室ID
+     * @param string $description 聊天室简介
+     */
+    private function genrateChatRoomId($name,$description = '')
+    {
+        $client = new JMessage($this->appKey, $this->masterSecret);
+        $room = new ChatRoom($client);
+        //$name = 'ft'.time();
+        $roomData = $room->create($name, $this->owner,$members = [], $description);
+        if(empty($roomData['body']['chatroom_id']))
+        {
+            return false;
+        }
+        $roomId = $roomData['body']['chatroom_id'];
+        return $roomId;
+    }
+
+    /**
      * 对战对手实时搜索
      * @param name string 名字
      * @param who  int  哪一边 1代表左边 | 2代表右边
@@ -153,7 +253,7 @@ class GameLive extends BaseController
     {
         $name = input('get.name');
         $who = input('get.who');
-        $result = Db::table('star_list')->where('c_name','like',"{$name}%")->select();
+        $result = Db::table('star_list')->where('c_name','like',"%{$name}%")->select();
         $res = '';
         if($result)
         {
