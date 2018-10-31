@@ -27,160 +27,207 @@
 </h2>
 <br><br>
 <form method="post" class="form form-horizontal" id="add-game-live">
-<table class="table table-border table-hover" align="center" style="width: 80%">
-    <tbody>
-    <tr class="text-c" >
-        <td>
-            <strong><b>*</b>比赛名称:</strong>
-            <input type="text" name="game_name" id="game_name"
-                   autocomplete="off"
-                   value="{$one.game_name}" placeholder="请输入比赛名" style="width:60%;height:40px" class="input-text radius size-XL">
-        </td>
-        <td>
-            <strong><b>*</b>比赛时间:</strong>
+    <table class="table table-border table-hover" align="center" style="width: 80%">
+        <tbody>
+        <tr class="text-c" >
+            <td>
+                <strong><b>*</b>比赛开始时间:</strong>
 
-            <input type="text"
-                   onfocus="selecttime(1)"
-                   {empty name="one"}
-                     value=""
-                   {else/}
-                     value="{:date('Y-m-d H:i:s',$one.start_time)}"
-                   {/empty}
-                   name="start_time"
-                   id="countTimestart" class="input-text Wdate radius" style="width:180px;height: 40px" autocomplete="off">
-        </td>
+                <input type="text"
+                       onfocus="selecttime(1)"
+                       {empty name="one"}
+                       value=""
+                       {else/}
+                value="{:date('Y-m-d H:i:s',$one.start_time)}"
+                {/empty}
+                name="start_time"
+                id="countTimestart" class="input-text Wdate radius" style="width:180px;height: 40px" autocomplete="off">
+            </td>
 
-    </tr>
-    <tr class="text-c">
-        <td>
-            <strong>对战A名称:</strong>
-            <input type="text" name="play_a_name" id="play_a_id"
-                   autocomplete="off"
-                   placeholder="请输入关键字搜索" onkeyup="showResult(this.value,1)"
-                   value="{$one.play_a_name}"  style="width:60%;height:40px;" class="input-text radius size-XL">
-            <div id="search_boxa" class="search_box" >
-                <ul id="player_boxa" class="player_box">
+            <td>
+                <strong><b>*</b>是否在首页显示:</strong>
+                <input type="radio" id="is_show_index-1"
+                       name="is_show_index" value="0" checked
+                       {$one.is_show_index  == 0 ? 'checked':''}>
+                <label for="radio-1">不展示</label>
+                <span style="padding-right: 20px"></span>
+                <input type="radio" id="is_show_index-2" name="is_show_index"
+                       {$one.is_show_index == 1 ? 'checked':''}
+                value="1">
+                <label for="radio-2">展示</label>
+            </td>
 
-                </ul>
-            </div>
-        </td>
-        <td>
-            <strong>对战B名称:</strong>
-            <input type="text" name="play_b_name" id="play_b_id"
-                   autocomplete="off"
-                   placeholder="请输入关键字搜索" onkeyup="showResult(this.value,2)"
-                   value="{$one.play_b_name}"  style="width:60%;height:40px" class="input-text radius size-XL">
-            <div id="search_boxb" class="search_box" >
-                <ul id="player_boxb" class="player_box">
+        </tr>
+        <tr class="text-c">
+            <td>
+                <strong>对战A名称:</strong>
+                <input type="text" name="play_a_name" id="play_a_id"
+                       autocomplete="off"
+                       placeholder="请输入关键字搜索" onkeyup="showResult(this.value,1)"
+                       value="{$one.play_a_name}"  style="width:60%;height:40px;" class="input-text radius size-XL">
+                <div id="search_boxa" class="search_box" >
+                    <ul id="player_boxa" class="player_box">
 
-                </ul>
-            </div>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <strong>对战B名称:</strong>
+                <input type="text" name="play_b_name" id="play_b_id"
+                       autocomplete="off"
+                       placeholder="请输入关键字搜索" onkeyup="showResult(this.value,2)"
+                       value="{$one.play_b_name}"  style="width:60%;height:40px" class="input-text radius size-XL">
+                <div id="search_boxb" class="search_box" >
+                    <ul id="player_boxb" class="player_box">
 
-        </td>
-    </tr>
+                    </ul>
+                </div>
 
-    <tr class="text-c">
-        <td>
-            <strong>有无直播源:</strong>
-            <span class="select-box size-XL radius mt-10">
-                    <select id="isLive" name="isLive" class="select" size="1">
-                        <option value="">是否有直播源</option>
-                        <option value="1" {$one.isLive == 1 ? 'selected' : ''}>有直播源</option>
-                        <option value="3" {$one.isLive == 3 ? 'selected' : ''}>无直播源</option>
-                    </select>
-            </span>
-        </td>
-        <td>
-            <strong><b>*</b>解析方式:</strong>
+            </td>
+        </tr>
+
+        <tr class="text-c">
+            <td>
+                <strong><b>*</b>解析方式:</strong>
                 <input type="radio" id="radio-1"
-                       name="analysis_type" value="0" checked
-                       {$one.analysis_type == 0 ? 'checked':''}>
+                       name="analysis_type" value="1" checked
+                       {$one.analysis_type == 1 ? 'checked':''}>
                 <label for="radio-1">点亮解析</label>
-            <span style="padding-right: 20px"></span>
+                <span style="padding-right: 20px"></span>
                 <input type="radio" id="radio-2" name="analysis_type"
-                       {$one.analysis_type == 1 ? 'checked':''}
-                       value="1">
+                       {$one.analysis_type == 2? 'checked':''}
+                value="2">
                 <label for="radio-2">直接播放</label>
-        </td>
-    </tr>
+            </td>
+            <td>
+                <strong><b>*</b>播放方式:</strong>
+                <input type="radio" id="radio11"
+                       name="bofang_type" value="1" checked
+                       {$one.bofang_type == 1 ? 'checked':''}>
+                <label for="radio-1">点量点播</label>
+                <span style="padding-right: 20px"></span>
+                <input type="radio" id="radio12" name="bofang_type"
+                       {$one.bofang_type == 2 ? 'checked':''}
+                value="2">
+                <label for="radio-2">点量直播</label>
+            </td>
+        </tr>
 
-    <tr class="text-c">
-        <td>
-            <strong><b>*</b>直播房间:</strong>
-            <input type="text"
-                   autocomplete="off"
-                   name="liveUrl" id="liveUrl"
-                   value="{$one.liveUrl}" placeholder=""
-                   style="width:60%;height:40px" class="input-text radius size-XL">
-        </td>
-    </tr>
+        <tr class="text-c">
+            <td>
+                <strong><b>*</b>直播房间:</strong>
+                <input type="text"
+                       autocomplete="off"
+                       name="liveUrl" id="liveUrl"
+                       value="{$one.liveUrl}" placeholder=""
+                       style="width:60%;height:40px" class="input-text radius size-XL">
+            </td>
 
-    <tr class="text-c">
-        <td>
-            <strong><b>*</b>A胜利局数:</strong>
-            <input type="text"
-                   name="a_win_num" id="a_win_num"
-                   autocomplete="off"
-                   value="{$one.a_win_num}" placeholder=""
-                   style="width:60%;height:40px" class="input-text radius size-XL">
-        </td>
-        <td>
-            <strong><b>*</b>B胜利局数:</strong>
-            <input type="text"
-                   name="b_win_num" id="b_win_num"
-                   autocomplete="off"
-                   value="{$one.b_win_num}" placeholder=""
-                   style="width:60%;height:40px" class="input-text radius size-XL">
-        </td>
-    </tr>
+        </tr>
 
-    <tr class="text-c">
-        <td>
-            <strong style="text-align: center">直播间公告:</strong>
-            <textarea name="live_notice" value="{$one.live_notice}"  class="radius" style="width:60%;height: 100px"></textarea>
-        </td>
+        <tr class="text-c">
+            <td>
+                <strong style="text-align: center">直播间公告:</strong>
+                <textarea name="live_notice" value="{$one.live_notice}"  class="radius" style="width:60%;height: 100px"></textarea>
+            </td>
 
-    </tr>
+        </tr>
 
-    <tr class="text-c ">
-        <td>
-            <strong><b>*</b>直播是否结束:</strong>
-                <input type="radio" id="radio-3" name="is_end" value="1"
-                       {$one.is_end == 1?'checked':''}
-                       checked>
-                <label for="radio-3">未结束</label>
-            <span style="padding-right: 20px"></span>
-                <input type="radio" id="radio-4" name="is_end" value="3"
-                       {$one.is_end == 3?'checked':''}>
-                <label for="radio-4">已结束</label>
-            <span style="padding-right: 20px"></span>
-                <input type="radio" id="radio-5" name="is_end" value="4"
+        <tr class="text-c">
+            <td id="a_score_td">
+                <strong><b>*</b>请输入比分:</strong>
+                <strong>A分数:</strong>
+                <input type="text"
+                       name="a_win_num" id="a_win_num"
+                       autocomplete="off"
+                       value="" placeholder="A的分数"
+                       onblur = "wirteScore1()"
+                       style="width:60%;height:40px" class="input-text radius size-XL">
+            </td>
+            <td id="b_score_td">
+                <strong>B分数:</strong>
+                <input type="text"
+                       name="b_win_num" id="b_win_num"
+                       autocomplete="off"
+                       value="" placeholder="B的分数"
+                       onblur = "wirteScore2()"
+                       style="width:60%;height:40px" class="input-text radius size-XL">
+            </td>
+        </tr>
+
+        <tr class="text-c ">
+            <td id="td_qisai">
+                <strong><b>*</b>是否弃赛:</strong>
+
+                <span style="padding-right: 20px"></span>
+                <input type="radio" id="radio_qisai"
+                       name="is_end" value="4"
+                       onblur="qisai()"
                        {$one.is_end == 4?'checked':''}>
-                <label for="radio-5">弃赛</label>
-        </td>
+                <label for="radio_qisai">弃赛</label>
+            </td>
 
-    </tr>
+            <script type="text/javascript">
+                function wirteScore1()
+                {
+                    var a_win_num = document.getElementById('a_win_num').value;
 
-    <tr class="text-c">
-        <td colspan="4">
-            <div>
-                <input hidden value="{$one.id}" name="id">
-                {empty name="one"}
+                    if(a_win_num.length != 0)
+                    {
+                        $('#radio_qisai').attr("disabled",true);
+                        document.getElementById("td_qisai").style.backgroundColor="silver";
+                    }
+                }
+                function wirteScore2()
+                {
+                    var b_win_num = document.getElementById('b_win_num').value;
+                    if(b_win_num.length != 0)
+                    {
+                        $('#radio_qisai').attr("disabled",true);
+                        document.getElementById("td_qisai").style.backgroundColor="silver";
+                    }
+                }
+                function qisai()
+                {
+                    $('#a_win_num').attr("disabled",true);
+                    $('#b_win_num').attr("disabled",true);
+                    document.getElementById("a_score_td").style.backgroundColor="silver";
+                    document.getElementById("b_score_td").style.backgroundColor="silver";
+                    document.getElementById("a_win_num").style.backgroundColor="silver";
+                    document.getElementById("b_win_num").style.backgroundColor="silver";
+                }
+            </script>
+            <!--<input type="radio" id="radio-3" name="is_end" value="1"-->
+            <!--{$one.is_end == 1?'checked':''}-->
+            <!--checked>-->
+            <!--<label for="radio-3">未结束</label>-->
+            <!--<span style="padding-right: 20px"></span>-->
+            <!--<input type="radio" id="radio-4" name="is_end" value="3"-->
+            <!--{$one.is_end == 3?'checked':''}>-->
+            <!--<label for="radio-4">已结束</label>-->
+
+        </tr>
+
+        <tr class="text-c">
+            <td colspan="4">
+                <div>
+                    <input hidden value="{$one.id}" name="id">
+                    {empty name="one"}
                     <input hidden value="{$bigGame_id}" name="bigGame_id">
                     <input hidden value="{$phase_id}" name="phase_id">
-                {else/}
+                    {else/}
                     <input hidden value="{$one.bigGame_id}" name="bigGame_id">
                     <input hidden value="{$one.phase_id}" name="phase_id">
-                {/empty}
-                <!--<button type="button" class="btn btn-success radius size-XL" onclick="history.go(-1)"> < </button>-->
-                <button onClick="removeIframe();" class="btn btn-success radius size-XL" type="button">&nbsp;&nbsp;<&nbsp;</button>
-                <button type="submit" class="btn btn-primary radius size-XL">提交</button>
-            </div>
-        </td>
-    </tr>
+                    {/empty}
+                    <!--<button type="button" class="btn btn-success radius size-XL" onclick="history.go(-1)"> < </button>-->
+                    <button onClick="removeIframe();" class="btn btn-success radius size-XL" type="button">&nbsp;&nbsp;<&nbsp;</button>
+                    <button type="submit" class="btn btn-primary radius size-XL">提交</button>
+                </div>
+            </td>
+        </tr>
 
-    </tbody>
-</table>
+        </tbody>
+    </table>
 </form>
 {include file="public/footer"}
 <script type="text/javascript" src="__STATIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
@@ -192,11 +239,11 @@
     $(function(){
         $('#add-game-live').validate({
             rules:{
-               /* game_name:{
-                    required:true,
-                    minlength:2,
-                    maxlength:16
-                },*/
+                /* game_name:{
+                     required:true,
+                     minlength:2,
+                     maxlength:16
+                 },*/
                 /*countTimestart:{
                     required:true,
                 },*/
@@ -252,52 +299,58 @@
         window.parent.location.reload();
     }
 
-/*输入关键词搜索球员或国家信息
-* name:内容
-* who:1指左边  2指右边
-* */
-function showResult(name,who)
-{
-    $.ajax({
-        type:'get',
-        url:'{:url("gameLive/search")}?name=' +name + "&who=" + who ,
-        success:function(result)
-        {
-            //console.log(result)  //<li onclick="choice(this, 1)">中国</li><li onclick="choice(this, 1)">中美</li>
-            if(who == '1')
+    /*输入关键词搜索球员或国家信息
+    * name:内容
+    * who:1指左边  2指右边
+    * */
+    function showResult(name,who)
+    {
+        $.ajax({
+            type:'get',
+            url:'{:url("gameLive/search")}?name=' +name + "&who=" + who ,
+            success:function(result)
             {
-                $('#player_boxa').html(result);
-            }else if(who == '2'){
-                $('#player_boxb').html(result);
+                //console.log(result)  //<li onclick="choice(this, 1)">中国</li><li onclick="choice(this, 1)">中美</li>
+                if(who == '1')
+                {
+                    $('#player_boxa').html(result);
+                }else if(who == '2'){
+                    $('#player_boxb').html(result);
+                }
             }
-        }
-    },'JSON');
-}
-
-function choice(th,who)
-{
-    //alert($(th).text()+who);  选中时
-    if(who == '1')
-    {
-        if($(th).text() == '暂时没有结果,请添加')
-        {
-            $('#play_a_id').val('');
-        }else{
-            $('#play_a_id').val($(th).text());
-        }
-        $('#player_boxa').html('');
-        //$('#search_boxa').css('border','0px solid #ccc');
-    }else if(who == '2')
-    {
-        if($(th).text()=='暂时没有结果,请添加')
-        {
-            $('#play_b_id').val('');
-        }else{
-            $('#play_b_id').val($(th).text());
-        }
-        $('#player_boxb').html('');
-        //$('#search_boxa').css('border','0px solid #ccc');
+        },'JSON');
     }
-}
+
+    function choice(th,who)
+    {
+        //alert($(th).text()+who);  选中时
+        if(who == '1')
+        {
+            if($(th).text() == '暂时没有结果,请添加')
+            {
+                $('#play_a_id').val('');
+            }else{
+                $('#play_a_id').val($(th).text());
+            }
+            $('#player_boxa').html('');
+            //$('#search_boxa').css('border','0px solid #ccc');
+        }else if(who == '2')
+        {
+            if($(th).text()=='暂时没有结果,请添加')
+            {
+                $('#play_b_id').val('');
+            }else{
+                $('#play_b_id').val($(th).text());
+            }
+            $('#player_boxb').html('');
+            //$('#search_boxa').css('border','0px solid #ccc');
+        }
+    }
 
 </script>
+<!--<td>-->
+<!--<strong><b>*</b>比赛名称:</strong>-->
+<!--<input type="text" name="game_name" id="game_name"-->
+<!--autocomplete="off"-->
+<!--value="{$one.game_name}" placeholder="请输入比赛名" style="width:60%;height:40px" class="input-text radius size-XL">-->
+<!--</td>-->
