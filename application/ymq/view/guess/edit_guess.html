@@ -93,28 +93,7 @@
                 <input type="text" name="play_b_name" value="{$play_b_name}" disabled>
             </td>
         </tr>
-        <tr class="text-c">
-            <td><strong><span>*</span>几局获胜</strong></td>
-            <td colspan="12" class="radio-style">
-                <label><input type="radio" name="game_win_number" value="2" {$guess_list_one.game_win_number ==2 ?'checked':''}>2</label>
-                <label><input type="radio" name="game_win_number" value="3" {$guess_list_one.game_win_number ==3 ?'checked':''}>3</label>
-                <label><input type="radio" name="game_win_number" value="4" {$guess_list_one.game_win_number ==4 ?'checked':''}>4</label>
-                <label><input type="radio" name="game_win_number" value="5" {$guess_list_one.game_win_number ==5 ?'checked':''}>5</label>
-                <label><input type="radio" name="game_win_number" value="6" {$guess_list_one.game_win_number ==6 ?'checked':''}>6</label>
-                <label><input type="radio" name="game_win_number" value="7" {$guess_list_one.game_win_number ==7 ?'checked':''}>7</label>
-                <label><input type="radio" name="game_win_number" value="8" {$guess_list_one.game_win_number ==8 ?'checked':''}>8</label>
-                <label><input type="radio" name="game_win_number" value="9" {$guess_list_one.game_win_number ==9 ?'checked':''}>9</label>
-                <label><input type="radio" name="game_win_number" value="10" {$guess_list_one.game_win_number ==10 ?'checked':''}>10</label>
-                <label><input type="radio" name="game_win_number" value="11" {$guess_list_one.game_win_number ==11 ?'checked':''}>11</label>
-                <label><input type="radio" name="game_win_number" value="12" {$guess_list_one.game_win_number ==12 ?'checked':''}>12</label>
-                <label><input type="radio" name="game_win_number" value="13" {$guess_list_one.game_win_number ==13 ?'checked':''}>13</label>
-                <label><input type="radio" name="game_win_number" value="14" {$guess_list_one.game_win_number ==14 ?'checked':''}>14</label>
-                <label><input type="radio" name="game_win_number" value="15" {$guess_list_one.game_win_number ==15 ?'checked':''}>15</label>
-                <label><input type="radio" name="game_win_number" value="16" {$guess_list_one.game_win_number ==16 ?'checked':''}>16</label>
-                <label><input type="radio" name="game_win_number" value="17" {$guess_list_one.game_win_number ==17 ?'checked':''}>17</label>
-                <label><input type="radio" name="game_win_number" value="18" {$guess_list_one.game_win_number ==18 ?'checked':''}>18</label>
-            </td>
-        </tr>
+     
         <tr class="text-c">
             <td><strong><span>*</span>胜负赔率</strong></td>
             <td>
@@ -223,55 +202,40 @@
             </script>
         </tr>
 
+
+
+        <!--进球大小盘-->
         <tr class="text-c">
-            <td><strong>局数赔率</strong></td>
-            <td colspan="6" class="number-game-guess">
-                <span>小于等于</span>
-                <input type="text" name="1_jushu"
-                       value="{$guess_gamenumber_one.1_jushu}" placeholder="局数" style="width: 60px;" autocomplete="off"><span>局,赔率为</span>
-                <input type="text" name="1_odds_js"
-                       id="1_odds_js" onblur="js_odds()"
-                       value="{$guess_gamenumber_one.1_odds_js}" placeholder="" style="width: 60px" autocomplete="off">
-                <br><br>
-                <input type="text" name="2_jushu_1"
-                       value="{$guess_gamenumber_one.2_jushu_1}" placeholder="局数" autocomplete="off">
-                --
-                <input type="text" name="2_jushu_2"
-                       value="{$guess_gamenumber_one.2_jushu_2}" placeholder="局数" autocomplete="off"><span>局,赔率为</span>
-                <input type="text" name="2_odds_js"
-                       id="2_odds_js" onblur="js_odds()"
-                       value="{$guess_gamenumber_one.2_odds_js}" placeholder="" autocomplete="off">
-                <br><br>
-                <span>大于等于</span>
-                <input type="text" name="3_jushu"
-                       value="{$guess_gamenumber_one.3_jushu}" placeholder="局数" autocomplete="off"><span>局,赔率为</span>
-                <input type="text" name="3_odds_js"
-                       id="3_odds_js" onblur="js_odds()"
-                       value="{$guess_gamenumber_one.3_odds_js}" placeholder="" autocomplete="off">
-            </td>
+            <td><strong><span>*</span>进球大小盘:</strong></td>
+            <td><input type="text" name="total_score" value="{$guess_total_score_one.total_score}" placeholder="请输入两队总进球数"></td>
+            <td><input type="text" name="1_compare_odds"
+                       id="1_compare_odds" onblur="totalscore_odds()"
+                       value="{$guess_total_score_one.1_compare_odds}" placeholder="大于进球数赔率"></td>
+            <td><input type="text" name="2_compare_odds"
+                       id="2_compare_odds" onblur="totalscore_odds()"
+                       value="{$guess_total_score_one.2_compare_odds}" placeholder="小于进球数赔率"></td>
             <td>
-                <span id="calres_js"></span>
+                <span id="calres_totalscore"></span>
             </td>
             <script type="text/javascript">
-                function js_odds()
+                function totalscore_odds()
                 {
-                    var js_id_1 =  $("input[id='1_odds_js']").val();
-                    var js_id_2 =  $("input[id='2_odds_js']").val();
-                    var js_id_3 =  $("input[id='3_odds_js']").val();
-                    if(js_id_1 !=0 && js_id_2 !=0 && js_id_3 !=0 )
+                    var score_id_1 =  $("input[id='1_compare_odds']").val();
+                    var score_id_2 =  $("input[id='2_compare_odds']").val();
+                    if(score_id_1 !=0 && score_id_2 !=0 )
                     {
-                        var odds = 1/js_id_1 + 1/js_id_2 + 1/js_id_3;
+                        var odds = 1/score_id_1 + 1/score_id_2;
                         var calres = (1/odds).toFixed(2);
                         if(  0.92<= calres >= 0.8)
                         {
                             //显示绿色
-                            var calres_js = document.getElementById('calres_js');
-                            $('#calres_js').addClass('calres_show');
-                            calres_js.innerText = calres;
+                            var calres_rf = document.getElementById('calres_totalscore');
+                            $('#calres_totalscore').addClass('calres_show');
+                            calres_rf.innerText = calres;
                         }else{
                             //显示红色
-                            var calres_js = document.getElementById('calres_js');
-                            calres_js.innerText = calres;
+                            var calres_rf = document.getElementById('calres_totalscore');
+                            calres_rf.innerText = calres;
                         }
                     }else{
                         return;
@@ -280,26 +244,6 @@
             </script>
         </tr>
 
-
-        <tr class="text-c">
-            <td><strong>局间竞猜</strong></td>
-            <td><input type="text" name="1_odds_jujian" value="{$guess_winner_jujian_one.1_odds_jujian}" placeholder="A胜" autocomplete="off"></td>
-            <td><input type="text" name="2_odds_jujian" value="{$guess_winner_jujian_one.2_odds_jujian}" placeholder="B胜" autocomplete="off"></td>
-            <td><strong>是否开启</strong></td>
-            <td class="radio-style" style="text-align: left">
-                <label><input type="radio"
-                              {$guess_winner_jujian_one.is_open == 1 ? 'checked':''}
-                    name="is_open" value="1">是</label>
-                <label><input type="radio"
-                              {$guess_winner_jujian_one.is_open == 0 ? 'checked':''}
-                    name="is_open" value="0">否</label>
-            </td>
-        </tr>
-
-        <tr class="text-c score-odds">
-            <td><strong>比分赔率</strong></td>
-            <td colspan="8"></td>
-        </tr>
         </tbody>
     </table>
 
@@ -309,9 +253,8 @@
         <input hidden value="{$guess_list_one.id}" name="guess_list_id">
         <input hidden value="{$guess_winner_one.id}" name="guess_winner_id">
         <input hidden value="{$guess_winner_rangfen_one.id}" name="guess_winner_rangfen_id">
-        <input hidden value="{$guess_gamenumber_one.id}" name="guess_gamenumber_id">
-        <input hidden value="{$guess_winner_jujian_one.id}" name="guess_winner_jujian_id">
-        <input hidden value="{$guess_score_one.id}" name="guess_score_id">
+        <input hidden value="{$guess_total_score_one.id}" name="guess_total_score_id">
+
 
         <button type="button" class="btn btn-success radius size-XL" onclick="history.go(-1)"> < </button>
         <!--<button onClick="removeIframe();" class="btn btn-success radius size-XL" type="button">&nbsp;&nbsp;<&nbsp;</button>
@@ -327,62 +270,6 @@
 <script type="text/javascript" src="__STATIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
 <script type="text/javascript" src="__STATIC__/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
-    $('input[name="game_win_number"]').click(function(){
-        var num=$(this).val();
-        addTr(num);
-    })
-
-    //给动态生成的比分里面加赔率
-
-    var game_win_number='{$guess_list_one.game_win_number}';
-    if(game_win_number > 1)
-    {
-        var pl_arr={$pl_arr};
-        addTr(game_win_number);
-        game_win_number = game_win_number * 2;
-        for(var i=1 ; i<=game_win_number; i++)
-        {
-            var ele='input[name='+i+'_peilv_bf]';
-            $(ele).val(pl_arr[i-1]);
-        }
-    }
-
-    function addTr(num)
-    {
-        var ttr='';
-        for(var i=0; i<num ; i++){
-            if(i == 18) break;              //显示完整的比分额
-            var left_bf= i == 0 ? (i+1) : (right_bf+1) ;   //左边的比分值,left和right_bf从1开始，依次往上加一
-            var left_pl=num+':'+i;           //左边的比分赔率
-
-            var right_bf=left_bf+1;          //右边的比分值i+1+parseInt(num);
-            var right_pl=i+':'+num;          //右边的比分赔率
-
-
-            //我要左右 1 2 这样的值
-
-            var tr=" <tr>" +
-                "<td width='10%'> </td>" +
-                "<td width='10%' colspan=2>" +
-                "<div> " +
-                "<span class='span-score'>"+left_pl+"</span>" +
-                "<input  type='hidden' name=bifen_"+left_bf+" value='"+left_pl+"' > " +
-                "<input class='input-score' type='text' name="+left_bf+"_peilv_bf autocomplete=\"off\"></div>" +
-                "</td> &nbsp;&nbsp;　　" +
-                "<td  width='10%' colspan=2>" +
-                "<div> " +
-                "<span class='span-score'>"+right_pl+"</span>" +
-                "<input type='hidden' name=bifen_"+right_bf+" value='"+right_pl+"' > " +
-                "<input class='input-score' type='text' name="+right_bf+"_peilv_bf autocomplete=\"off\"> " +
-                "</div> " +
-                "</td> " +
-                "</tr>";
-            ttr+=tr;
-        }
-        $(".score-odds").nextAll().remove();
-        $('tbody').append(ttr);
-    }
-
     $(function(){
         $('.skin-minimal input').iCheck({
             checkboxClass: 'icheckbox-blue',

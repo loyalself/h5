@@ -42,15 +42,15 @@ class Menu
             $parent_menu_where = "id in ({$rules['rules']}) and p_id = 0";
             $son_menu_where  = "id in ({$rules['rules']}) and p_id != 0 and is_show = 1";
         }
-        //先查询出父级菜单
+        //先查询出父级菜单,orderby排序,要想哪个排序先生效,就要把哪个放在前面
         $parent_menu = Db::table('admin_rule')
                       ->where($parent_menu_where)
-                      ->order('id asc')
+                      ->order('orderby desc,id asc')
                       ->select();
         //查出子级菜单
         $son_menu = Db::table('admin_rule')
                     ->where($son_menu_where)
-                    ->order('id asc')
+                    ->order('orderby desc,id asc')
                     ->select();
         $menu = [];
         foreach($parent_menu as $k=>$v)

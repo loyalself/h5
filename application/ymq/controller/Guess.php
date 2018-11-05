@@ -16,6 +16,7 @@ use app\ymq\model\GuessWinner;
 use app\ymq\model\GuessWinnerRangfen;
 use app\ymq\model\GameLive;
 use app\ymq\model\GuessWinnerJujian;
+use app\ymq\model\GuessTotalScore;
 use think\Db;
 
 class Guess extends BaseController
@@ -175,72 +176,14 @@ class Guess extends BaseController
                 return $this->error($e->getMessage(),0);
             }
 
-            //局数赔率表 guess_gamenumber
-            $guess_gamenumber['game_id'] = $game_id;
-            $guess_gamenumber['game_number'] = $game_number;
-            $guess_gamenumber['1_jushu'] = $post['1_jushu'];
-            $guess_gamenumber['2_jushu'] = $post['2_jushu_1'].'-'.$post['2_jushu_2'];
-            $guess_gamenumber['3_jushu'] = $post['3_jushu'];
-            $guess_gamenumber['1_odds_js'] = $post['1_odds_js'];
-            $guess_gamenumber['2_odds_js'] = $post['2_odds_js'];
-            $guess_gamenumber['3_odds_js'] = $post['3_odds_js'];
+            //进球大小盘   guess_total_score
+            $guess_total_score['game_id'] = $game_id;
+            $guess_total_score['game_number'] = $game_number;
+            $guess_total_score['total_score'] = $post['total_score']?:0;
+            $guess_total_score['1_compare_odds'] = $post['1_compare_odds']?:0;
+            $guess_total_score['2_compare_odds'] = $post['2_compare_odds']?:0;
             try{
-                $res = GuessGamenumber::create($guess_gamenumber);
-            }catch (\Exception $e){
-                return $this->error($e->getMessage(),0);
-            }
-
-            //局间竞猜表 guess_winner_jujian
-            $guess_winner_jujian['game_id'] = $game_id;
-            $guess_winner_jujian['game_number'] = $game_number;
-            $guess_winner_jujian['1_winner_id'] = $play_a_id;
-            $guess_winner_jujian['2_winner_id'] = $play_b_id;
-            $guess_winner_jujian['1_odds_jujian'] = $post['1_odds_jujian'];
-            $guess_winner_jujian['2_odds_jujian'] = $post['2_odds_jujian'];
-            $guess_winner_jujian['is_open'] = isset($_POST['is_open'])?$post['is_open'] : 0;
-            try{
-                $res = GuessWinnerJujian::create($guess_winner_jujian);
-            }catch (\Exception $e){
-                return $this->error($e->getMessage(),0);
-            }
-
-            //比分赔率表  guess_score(因为这里你不知道它有多少个字段)
-            $i = 1;
-            $bifen_ = '';
-            $peilv_bf_ = '';
-            $fields = '';
-            $values = '';
-            foreach($post as $k=>$v)
-            {
-                //查找有几个比分赔率
-                if (strstr($k, 'peilv_bf'))
-                {
-                    //比分
-                    $bf = $bifen_.$i;
-                    $bf = $_POST['bifen_'.$i];
-
-                    //赔率
-                    $pl = $peilv_bf_.$i;
-                    $pl = $v ?: 0;;
-                    $fields .= $i."_bifen".",".$i."_peilv_bf,";
-                    $values .= "'$bf'".','."'$pl'".',';
-                    $i++;
-                }
-            }
-            $fields = trim($fields,',');
-            $values = trim($values,',');
-            $create_time = time();
-            if(empty($fields))
-            {
-                $fields = 'game_id,'.'game_number,'.'create_time'.$fields;
-                $values = $game_id.','.$game_number.','.$create_time.$values;
-            }else{
-                $fields = 'game_id,'.'game_number,'.'create_time,'.$fields;
-                $values = $game_id.','.$game_number.','.$create_time.','.$values;
-            }
-            //dump($fields);
-            try{
-                $res = Db::execute("insert guess_score($fields) values($values)");
+                $res = GuessTotalScore::create($guess_total_score);
             }catch (\Exception $e){
                 return $this->error($e->getMessage());
             }
@@ -286,28 +229,7 @@ class Guess extends BaseController
         $guess_list_one = Db::table('guess_list')->where('game_id',$game_id)->find();
         $guess_winner_one = Db::table('guess_winner')->where('game_id',$game_id)->find();
         $guess_winner_rangfen_one = Db::table('guess_winner_rangfen')->where('game_id',$game_id)->find();
-        $guess_gamenumber_one = Db::table('guess_gamenumber')->where('game_id',$game_id)->find();
-        if(!empty($guess_gamenumber_one))
-        {
-            $jushu_2 = $guess_gamenumber_one['2_jushu'];
-            $jushu_2_arr = explode('-',$jushu_2);
-            $guess_gamenumber_one['2_jushu_1'] = $jushu_2_arr[0];
-            $guess_gamenumber_one['2_jushu_2'] = $jushu_2_arr[1];
-        }
-        $guess_winner_jujian_one = Db::table('guess_winner_jujian')->where('game_id',$game_id)->find();
-        $guess_score_one = Db::table('guess_score')->where('game_id',$game_id)->find();
-
-        $pl_arr = '';
-        for ($i=1; $i <=$guess_list_one['game_win_number']*2; $i++)
-        {
-            $ele = $i.'_peilv_bf';
-            $pl_arr .= $guess_score_one[$ele].',';
-        }
-        $pl_arr = trim($pl_arr,',');
-        $pl_arr = '[' . $pl_arr. ']';
-
-        //有值的时候dump($pl_arr);  //  string(25) "[1.1,2.2,3.3,4.4,5.5,6.6]",就是赔率
-        //没值的时候dump($pl_arr);  // []
+        $guess_total_score_one = Db::table('guess_total_score')->where('game_id',$game_id)->find();
 
         //表单提交逻辑
         if(request()->isPost())
@@ -395,69 +317,20 @@ class Guess extends BaseController
                 return $this->result($e->getMessage(),0);
             }
 
-            //局数赔率表 guess_gamenumber
-            $guess_gamenumber['game_id'] = $game_id;
-            $guess_gamenumber['game_number'] = $game_number;
-            $guess_gamenumber['1_jushu'] = $post['1_jushu'];
-            $guess_gamenumber['2_jushu'] = $post['2_jushu_1'].'-'.$post['2_jushu_2'];
-            $guess_gamenumber['3_jushu'] = $post['3_jushu'];
-            $guess_gamenumber['1_odds_js'] = $post['1_odds_js'];
-            $guess_gamenumber['2_odds_js'] = $post['2_odds_js'];
-            $guess_gamenumber['3_odds_js'] = $post['3_odds_js'];
-            $guess_gamenumber['id'] = intval($post['guess_gamenumber_id']);
+            //进球大小盘   guess_total_score
+            $guess_total_score['game_id'] = $game_id;
+            $guess_total_score['game_number'] = $game_number;
+            $guess_total_score['total_score'] = $post['total_score'];
+            $guess_total_score['1_compare_odds'] = $post['1_compare_odds']?:0;
+            $guess_total_score['2_compare_odds'] = $post['2_compare_odds']?:0;
+            $guess_total_score['id'] = input('post.guess_total_score_id');
+            //halt($guess_total_score);
             try{
-                $res = model('GuessGamenumber')->insGG($guess_gamenumber);
+                $gts = new GuessTotalScore();
+                $res = $gts->allowField(true)->save($guess_total_score,$guess_total_score['id']);
             }catch (\Exception $e){
-                return $this->result($e->getMessage(),0);
+                return $this->error($e->getMessage());
             }
-
-            //局间竞猜表 guess_winner_jujian
-            $guess_winner_jujian['game_id'] = $game_id;
-            $guess_winner_jujian['game_number'] = $game_number;
-            $guess_winner_jujian['1_winner_id'] = $play_a_id;
-            $guess_winner_jujian['2_winner_id'] = $play_b_id;
-            $guess_winner_jujian['1_odds_jujian'] = $post['1_odds_jujian'];
-            $guess_winner_jujian['2_odds_jujian'] = $post['2_odds_jujian'];
-            $guess_winner_jujian['is_open'] = isset($_POST['is_open'])?$post['is_open'] : 0;
-            $guess_winner_jujian['id'] = intval($post['guess_winner_jujian_id']);
-            try{
-                model('GuessWinnerJujian')->insGWJ($guess_winner_jujian);
-            }catch (\Exception $e){
-                return $this->result($e->getMessage(),0);
-            }
-
-            //比分赔率表  guess_score(因为这里你不知道它有多少个字段)
-            $i = 1;
-            $bifen_ = '';
-            $peilv_bf_ = '';
-            $fields = '';
-            $values = '';
-            $guess_score_id = input('param.guess_score_id');
-            foreach ($_POST as $k => $v)
-            {
-                //查找有几个比分赔率
-                if(strstr($k, 'peilv_bf'))
-                {
-                    //比分
-                    $bf = $bifen_.$i;
-                    $bf = $_POST['bifen_'.$i];
-
-                    //赔率
-                    $pl = $peilv_bf_.$i;
-                    $pl = $v;
-                    $fields .= $i."_bifen='$bf',".$i."_peilv_bf='$pl',";
-                    $i++;
-                }
-            }
-            $fields = "game_id='{$game_id}',"."game_number='{$game_number}',".$fields;
-            $fields = trim($fields,',');
-
-            try{
-                $res = Db::execute("update guess_score set $fields  where id= $guess_score_id");
-            }catch (\Exception $e){
-                return $this->result($e->getMessage(),0);
-            }
-
 
             if($res)
             {
@@ -478,10 +351,7 @@ class Guess extends BaseController
             'guess_list_one'=>$guess_list_one,
             'guess_winner_one'=>$guess_winner_one,
             'guess_winner_rangfen_one'=>$guess_winner_rangfen_one,
-            'guess_gamenumber_one'=>$guess_gamenumber_one,
-            'guess_winner_jujian_one'=>$guess_winner_jujian_one,
-            'guess_score_one'=>$guess_score_one,
-            'pl_arr'=>$pl_arr
+            'guess_total_score_one'=>$guess_total_score_one,
         ]);
     }
 

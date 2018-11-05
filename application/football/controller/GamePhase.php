@@ -17,7 +17,7 @@ class GamePhase extends Common
     private $tableName = 'game_phase';
 
     /**
-     * 查看赛事阶段列表
+     * 查看赛事阶段列表,只显示没有被删除的(没有被屏蔽的)
      * @return \think\response\View
      */
     public function phaseList()
@@ -25,9 +25,8 @@ class GamePhase extends Common
         $where = [];
         $bigGame_id = intval(input('param.id'));
         $where['bigGame_id'] = $bigGame_id;
-        //$list = $this->comList($this->tableName,$where);
+        $where['status'] = ['neq',1];
         $list = $this->db->table($this->tableName)->where($where)->select();
-	//dump($list);
         return view('',[
             'bigGame_id'=>$bigGame_id,
             'list'=>$list
@@ -69,10 +68,11 @@ class GamePhase extends Common
             'bigGame_id'=>$bigGame_id
         ]);
     }
-     
-        
+
+
     /**
-     * 删除
+     * 删除,并不是硬删除,只是软删除,更改status的值为1
+     * @param primary key id int 阶段id
      */
     public function del()
     {
@@ -80,7 +80,11 @@ class GamePhase extends Common
         {
             $id = input('post.id');
             try{
-                $res = $this->db->table($this->tableName)->where('id',$id)->delete();
+                $sql = "update game_phase gp inner join game_live gl
+                        on gp.id = gl.phase_id 
+                        set gp.status = 1,gl.status = 1
+                        where gp.id = $id";
+                $res = $this->db->execute($sql);
             }catch (\Exception $e){
                 return json_show($e->getMessage(),0);
             }
@@ -94,7 +98,4 @@ class GamePhase extends Common
             return json_show('操作异常,请稍后再试',0);
         }
     }
-
-
-
 }

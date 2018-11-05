@@ -290,4 +290,241 @@ class GameLive extends BaseController
             return json_show('操作异常,请稍后再试',0);
         }
     }
+
+    /**
+     * 结算
+     * @param id 比赛的主键id,根据id查出竞猜信息
+     */
+    public function settlement()
+    {
+        if(request()->isGet())
+        {
+            $id = intval(input('get.id'));     //比赛的主键id
+
+            //查询这场比赛的胜利者
+            $game_data = $this->db->table('game_live')->where('id',$id)->find();
+            $winner = $game_data['winner']; //winner对应比赛对手的id,即play_a_id 或者 play_b_id
+            //dump($winner);
+            //1、根据比赛结果找胜利者的赔率  guess_winner
+            for($i=1;$i<=3;$i++)
+            {   //1_winner_id字段的作用:标识谁赢了；标识左胜
+                $guess_winner = $this->db->table('guess_winner')->where('game_id',$id)->where($i.'_winner_id',$winner)->find();
+                // 找到获胜者对应的 赔率 odds
+                if(!empty($guess_winner))
+                {
+                    //竞猜赔率id
+                    $jc_pl_id_sf = $i;
+                    $jc_odds = $i.'_winner_odds';   //找到对应的赔率
+                    break;
+                }
+            }
+            //dump($guess_winner);
+
+            //给投注胜利的用户加钱,只是更新投注表里的金钱,还没有更新用户表里的真实金钱
+            if(!empty($guess_winner))
+            {
+                $mtime = time();
+                //获得相应竞猜表的主键id,对应guess_userbet表里的jc_id
+                $jc_id = $guess_winner['id'];
+                // 更新单选竞猜中的 guess_winner 胜利用户，并给胜利者竞猜结算盈利的钱
+                $sql = "update guess_userbet set isWin=1,profit_loss = wager * odds,mtime = $mtime where
+                     game_id = $id and jc_id = $jc_id and jc_pl_id = $jc_pl_id_sf and jc_type = 1 and bet_status=1";
+                //echo $sql;
+                try{
+                    $res1 = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+
+                //更新单选竞猜中的 guess_winner 失败用户
+                $sql = "update guess_userbet set isWin=2,profit_loss=wager, mtime='{$mtime}' 
+                      where profit_loss='' and  game_id='{$id}' and jc_type = 1 and bet_status = 1";
+                //echo $sql;
+                try{
+                    $res2 = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+            }
+            ###################################################
+            //2.让分结算
+            //$sql = "select 1_winner_rangfen from guess_winner_rangfen where game_id={$id}";
+            try{
+                //先查询出当前比赛的让分数值
+                $rangfen = $this->db->table('guess_winner_rangfen')->where('game_id',$id)->value('1_winner_rangfen');
+            }catch (\Exception $e){
+                return json_show($e->getMessage(),0);
+            }
+            //如果是平局,更新投注表选择平局的比赛状态isWin为1
+            if(($game_data['a_win_num'] + $rangfen) == $game_data['b_win_num'])
+            {
+                try{
+                    $sql = "update guess_userbet set isWin=1, profit_loss=wager * odds, mtime={$mtime}
+                      where game_id={$id} and jc_pl_id=3 and jc_type=2 and bet_status=1";
+                    $res = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+
+                try{
+                    $sql = "update guess_userbet set isWin=2, isSettlement=1, profit_loss=wager, mtime={$mtime}
+                    where profit_loss='' and game_id={$id} and jc_pl_id!=3 and jc_type=2 and bet_status=1";
+                    $res = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+            }
+
+            //a胜
+            if(($game_data['a_win_num'] + $rangfen) > $game_data['b_win_num'])
+            {
+                try{
+                    $sql = "update guess_userbet set isWin=1, profit_loss = wager * odds, mtime={$mtime}
+                      where game_id={$id} and jc_pl_id=1 and jc_type=2 and bet_status=1";
+                    $res = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+
+                try{
+                    $sql = "update guess_userbet set isWin=2, isSettlement=1, profit_loss=wager, mtime={$mtime}
+                    where profit_loss='' and game_id={$id} and jc_pl_id!=1 and jc_type=2 and bet_status=1";
+                    $res = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+            }
+
+            //b胜
+            if(($game_data['a_win_num'] + $rangfen) < $game_data['b_win_num'])
+            {
+                try{
+                    $sql = "update guess_userbet set isWin=1,profit_loss=wager*odds, mtime={$mtime}
+                      where game_id={$id} and jc_pl_id=2 and jc_type=2 and bet_status=1";
+                    $res = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+
+                try{
+                    $sql = "update guess_userbet set isWin=2,isSettlement=1,profit_loss=wager, mtime={$mtime}
+                    where profit_loss='' and game_id={$id} and jc_pl_id!=2 and jc_type=2 and bet_status=1";
+                    $res = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+            }
+
+            //4.进球大小盘结算 jc_type 6
+            if(($game_data['a_win_num'] + $game_data['b_win_num']) > 2.5)
+            {
+                try{
+                    $sql = "update guess_userbet set isWin=1,profit_loss=wager*odds, mtime={$mtime}
+                    where game_id={$id} and jc_pl_id=1 and jc_type=6 and bet_status=1";
+                    $res = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+            }else{
+                try{
+                    $sql = "update guess_userbet set isWin=2,isSettlement=1,profit_loss=wager,mtime={$mtime}
+                    where profit_loss='' and game_id={$id} and jc_pl_id=2 and jc_type=6 and bet_status=1";
+                    $res = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+            }
+            #################################
+            /*****
+             *
+             * 用户获胜 ~ 加钱
+             *
+             */
+            // 给用户加钱，当前比赛所有下注胜利并且未结算的用户，
+            //找到该场比赛下的所有投注
+            $sql = "select uid from guess_userbet where game_id = $id and isWin = 1 and isSettlement=0 group by uid";
+            //echo $sql;
+            try{
+                $currentGameBetUser_all = $this->db->query($sql);
+            }catch (\Exception $e){
+                return json_show($e->getMessage(),0);
+            }
+            //halt($currentGameBetUser_all); //有多个用户就是数组,为空就不会走到下面的foreach循环
+
+            foreach ($currentGameBetUser_all as $k=>$v)
+            {
+                $uid = $v['uid'];
+                //查询用户余额,即通过投注返现的余额
+                $sql = "select operation_amount from userinfo where id='{$uid}' limit 1";
+                try{
+                    $operation_amount = $this->db->query($sql);  //获得用户的余额
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+                //dump($operation_amount);
+
+                /**
+                 * 投注赢取总钱
+                 * isSettlement = 0 未结算
+                 */
+//                $sql="select sum(profit_loss) as userWinWager
+//             from guess_userbet where game_id={$id} and isWin=1 and isSettlement=0 and uid={$uid}";
+                //echo $sql;
+                try{
+                    $userWinWager_array = $this->db->table('guess_userbet')->where('game_id',$id)->where('isWin',1)->where('isSettlement',0)
+                        ->where('uid',$uid)->field('profit_loss as userWinWager')->find();
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+
+                //dump($userWinWager['userWinWager']);
+                $userWinWager = $userWinWager_array['userWinWager'];
+                //插入用户收支记录表
+                $ctime = time();
+                //sz_type 1支出  2 收入
+                $sql="insert into income_records(uid,amount,sz_name,sz_type,ctime) 
+			   values ($uid,'{$userWinWager}','单选竞猜',2,$ctime)";
+                //echo $sql;
+                try{
+                    $userincome_record_id = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+                //标记为已结算
+                $sql="update guess_userbet set isSettlement=1
+			     where game_id = {$id} and isWin=1 and isSettlement=0 and uid={$uid} ";
+                //echo $sql;
+                try{
+                    $yes_quiz_id = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+                //dump($yes_quiz_id);
+
+                //给用户加钱
+                $sql="update userinfo set operation_amount=operation_amount+{$userWinWager},
+                      total_amount = operation_amount+recharge_amount
+                      where id={$uid} limit 1";
+                //echo $sql;
+                try{
+                    $useradd_money_id = $this->db->execute($sql);
+                }catch (\Exception $e){
+                    return json_show($e->getMessage(),0);
+                }
+                //halt($useradd_money_id);
+                if(empty($userincome_record_id) || empty($yes_quiz_id) || empty($useradd_money_id))
+                {
+                    return json_show('结算失败',0);
+                }
+            }
+            //竞猜标记为已结束
+            $sql="update guess_list set status=2 where game_id={$id} limit 1";
+            try{
+                $guess_is_end = $this->db->execute($sql);
+            }catch (\Exception $e){
+                return json_show($e->getMessage(),0);
+            }
+            return json_show('结算竞猜成功,用户已收到竞猜胜利的钱币',1);
+        }
+    }
 }

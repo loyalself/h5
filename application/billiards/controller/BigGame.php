@@ -19,7 +19,7 @@ class BigGame extends Common
      */
     public function bigGameList()
     {
-        $list = $this->db->table('big_game_list')->select();
+        $list = $this->db->table('big_game_list')->where('status','neq',1)->select();
         return view('',['list'=>$list]);
     }
     /*
@@ -64,24 +64,34 @@ class BigGame extends Common
     }
 
     /**
-     * 删除
-     * @return bool|int
-     * @throws \think\Exception
-     * @throws \think\exception\PDOException
+     * 删除,更改大赛的状态,并不是硬删除
+     * @param  id int primary key
+     * @param  status 为1代表删除(即屏蔽)
+     * @return Json
      */
     public function del()
     {
-        $id = intval(input('post.id'));
-        try{
-            $res = $this->db->table('big_game_list')->where('id',$id)->delete();
-        }catch (\Exception $e){
-            return json_show($e->getMessage(),0);
-        }
-        if($res)
+        if(request()->isPost())
         {
-            return json_show('删除成功',1);
-        }else{
-            return json_show('删除失败',0);
+            $id = input('post.id');
+            try{
+                $sql1 = "update big_game_list b INNER JOIN game_phase g 
+                         on b.id=g.bigGame_id
+                         set b.status=1,g.status=1 where b.id = $id";
+
+                $sql2 = "update game_live set status = 1 where bigGame_id = $id";
+
+                $res1 = $this->db->execute($sql1);
+                $res2 = $this->db->execute($sql2);
+            }catch (\Exception $e){
+                return json_show($e->getMessage(),0);
+            }
+            if($res1 && $res2)
+            {
+                return json_show('删除成功',1);
+            }else{
+                return json_show('删除失败',0);
+            }
         }
     }
 }

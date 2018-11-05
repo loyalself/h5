@@ -99,28 +99,28 @@
             </td>
         </tr>
 
-        <tr class="text-c">
-            <td><strong><span>*</span>几局获胜</strong></td>
-            <td colspan="12" class="radio-style">
-                <label><input type="radio" name="game_win_number" value="2">2</label>
-                <label><input type="radio" name="game_win_number" value="3">3</label>
-                <label><input type="radio" name="game_win_number" value="4">4</label>
-                <label><input type="radio" name="game_win_number" value="5">5</label>
-                <label><input type="radio" name="game_win_number" value="6">6</label>
-                <label><input type="radio" name="game_win_number" value="7">7</label>
-                <label><input type="radio" name="game_win_number" value="8">8</label>
-                <label><input type="radio" name="game_win_number" value="9">9</label>
-                <label><input type="radio" name="game_win_number" value="10">10</label>
-                <label><input type="radio" name="game_win_number" value="11">11</label>
-                <label><input type="radio" name="game_win_number" value="12">12</label>
-                <label><input type="radio" name="game_win_number" value="13">13</label>
-                <label><input type="radio" name="game_win_number" value="14">14</label>
-                <label><input type="radio" name="game_win_number" value="15">15</label>
-                <label><input type="radio" name="game_win_number" value="16">16</label>
-                <label><input type="radio" name="game_win_number" value="17">17</label>
-                <label><input type="radio" name="game_win_number" value="18">18</label>
-            </td>
-        </tr>
+        <!--<tr class="text-c">-->
+            <!--<td><strong><span>*</span>几局获胜</strong></td>-->
+            <!--<td colspan="12" class="radio-style">-->
+                <!--<label><input type="radio" name="game_win_number" value="2">2</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="3">3</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="4">4</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="5">5</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="6">6</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="7">7</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="8">8</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="9">9</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="10">10</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="11">11</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="12">12</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="13">13</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="14">14</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="15">15</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="16">16</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="17">17</label>-->
+                <!--<label><input type="radio" name="game_win_number" value="18">18</label>-->
+            <!--</td>-->
+        <!--</tr>-->
 
 
         <tr class="text-c">
@@ -226,61 +226,61 @@
             </script>
         </tr>
 
-        <tr class="text-c">
-            <td><strong>局数赔率</strong></td>
-            <td colspan="6" class="number-game-guess">
-                <span>小于等于</span>
-                <input type="text" name="1_jushu"
-                       value="" placeholder="局数" style="width: 60px;" autocomplete="off"><span>局,赔率为</span>
-                <input type="text" name="1_odds_js"
-                       id="1_odds_js" onblur="js_odds()"
-                       value="" placeholder="" style="width: 60px" autocomplete="off">
-                <br><br>
-                <input type="text" name="2_jushu_1"
-                       value="" placeholder="局数" autocomplete="off">
-                --
-                <input type="text" name="2_jushu_2"
-                       value="" placeholder="局数" autocomplete="off"><span>局,赔率为</span>
-                <input type="text" name="2_odds_js"
-                       id="2_odds_js" onblur="js_odds()"
-                       value="" placeholder="" autocomplete="off">
-                <br><br>
-                <span>大于等于</span><input type="text" name="3_jushu"
-                                        value="" placeholder="局数" autocomplete="off"><span>局,赔率为</span>
-                <input type="text" name="3_odds_js"
-                       id="3_odds_js" onblur="js_odds()"
-                       value="" placeholder="" autocomplete="off">
-            </td>
-            <td>
-                <span id="calres_js"></span>
-            </td>
-            <script type="text/javascript">
-                function js_odds()
-                {
-                    var js_id_1 =  $("input[id='1_odds_js']").val();
-                    var js_id_2 =  $("input[id='2_odds_js']").val();
-                    var js_id_3 =  $("input[id='3_odds_js']").val();
-                    if(js_id_1 !=0 && js_id_2 !=0 && js_id_3 !=0 )
-                    {
-                        var odds = 1/js_id_1 + 1/js_id_2 + 1/js_id_3;
-                        var calres = (1/odds).toFixed(2);
-                        if(  0.92<= calres >= 0.8)
-                        {
-                            //显示绿色
-                            var calres_js = document.getElementById('calres_js');
-                            $('#calres_js').addClass('calres_show');
-                            calres_js.innerText = calres;
-                        }else{
-                            //显示红色
-                            var calres_js = document.getElementById('calres_js');
-                            calres_js.innerText = calres;
-                        }
-                    }else{
-                        return;
-                    }
-                }
-            </script>
-        </tr>
+        <!--<tr class="text-c">-->
+            <!--<td><strong>局数赔率</strong></td>-->
+            <!--<td colspan="6" class="number-game-guess">-->
+                <!--<span>小于等于</span>-->
+                <!--<input type="text" name="1_jushu"-->
+                       <!--value="" placeholder="局数" style="width: 60px;" autocomplete="off"><span>局,赔率为</span>-->
+                <!--<input type="text" name="1_odds_js"-->
+                       <!--id="1_odds_js" onblur="js_odds()"-->
+                       <!--value="" placeholder="" style="width: 60px" autocomplete="off">-->
+                <!--<br><br>-->
+                <!--<input type="text" name="2_jushu_1"-->
+                       <!--value="" placeholder="局数" autocomplete="off">-->
+                <!--&#45;&#45;-->
+                <!--<input type="text" name="2_jushu_2"-->
+                       <!--value="" placeholder="局数" autocomplete="off"><span>局,赔率为</span>-->
+                <!--<input type="text" name="2_odds_js"-->
+                       <!--id="2_odds_js" onblur="js_odds()"-->
+                       <!--value="" placeholder="" autocomplete="off">-->
+                <!--<br><br>-->
+                <!--<span>大于等于</span><input type="text" name="3_jushu"-->
+                                        <!--value="" placeholder="局数" autocomplete="off"><span>局,赔率为</span>-->
+                <!--<input type="text" name="3_odds_js"-->
+                       <!--id="3_odds_js" onblur="js_odds()"-->
+                       <!--value="" placeholder="" autocomplete="off">-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<span id="calres_js"></span>-->
+            <!--</td>-->
+            <!--<script type="text/javascript">-->
+                <!--function js_odds()-->
+                <!--{-->
+                    <!--var js_id_1 =  $("input[id='1_odds_js']").val();-->
+                    <!--var js_id_2 =  $("input[id='2_odds_js']").val();-->
+                    <!--var js_id_3 =  $("input[id='3_odds_js']").val();-->
+                    <!--if(js_id_1 !=0 && js_id_2 !=0 && js_id_3 !=0 )-->
+                    <!--{-->
+                        <!--var odds = 1/js_id_1 + 1/js_id_2 + 1/js_id_3;-->
+                        <!--var calres = (1/odds).toFixed(2);-->
+                        <!--if(  0.92<= calres >= 0.8)-->
+                        <!--{-->
+                            <!--//显示绿色-->
+                            <!--var calres_js = document.getElementById('calres_js');-->
+                            <!--$('#calres_js').addClass('calres_show');-->
+                            <!--calres_js.innerText = calres;-->
+                        <!--}else{-->
+                            <!--//显示红色-->
+                            <!--var calres_js = document.getElementById('calres_js');-->
+                            <!--calres_js.innerText = calres;-->
+                        <!--}-->
+                    <!--}else{-->
+                        <!--return;-->
+                    <!--}-->
+                <!--}-->
+            <!--</script>-->
+        <!--</tr>-->
 
         <!--两队是否得分-->
         <!--<tr class="text-c">-->
@@ -323,96 +323,95 @@
         <!--</tr>-->
 
         <!--进球大小盘-->
+        <tr class="text-c">
+        <td><strong><span>*</span>进球大小盘:</strong></td>
+        <td><input type="text" name="total_score" value="" placeholder="请输入两队总进球数"></td>
+        <td><input type="text" name="1_compare_odds"
+        id="1_compare_odds" onblur="totalscore_odds()"
+        value="" placeholder="大于进球数赔率"></td>
+        <td><input type="text" name="2_compare_odds"
+        id="2_compare_odds" onblur="totalscore_odds()"
+        value="" placeholder="小于进球数赔率"></td>
+        <td>
+        <span id="calres_totalscore"></span>
+        </td>
+        <script type="text/javascript">
+        function totalscore_odds()
+        {
+        var score_id_1 =  $("input[id='1_compare_odds']").val();
+        var score_id_2 =  $("input[id='2_compare_odds']").val();
+        if(score_id_1 !=0 && score_id_2 !=0 )
+        {
+        var odds = 1/score_id_1 + 1/score_id_2;
+        var calres = (1/odds).toFixed(2);
+        if(  0.92<= calres >= 0.8)
+        {
+        //显示绿色
+        var calres_rf = document.getElementById('calres_totalscore');
+        $('#calres_totalscore').addClass('calres_show');
+        calres_rf.innerText = calres;
+        }else{
+        //显示红色
+        var calres_rf = document.getElementById('calres_totalscore');
+        calres_rf.innerText = calres;
+        }
+        }else{
+        return;
+        }
+        }
+        </script>
+        </tr>
+
+
         <!--<tr class="text-c">-->
-        <!--<input type="hidden" name="total_score" value="1">-->
-        <!--<td><strong><span>*</span>进球大小盘:</strong></td>-->
-        <!--<td><input type="text" name="total_score" value="" placeholder="请输入两队总进球数"></td>-->
-        <!--<td><input type="text" name="1_compare_odds"-->
-        <!--id="1_compare_odds" onblur="totalscore_odds()"-->
-        <!--value="" placeholder="大于进球数赔率"></td>-->
-        <!--<td><input type="text" name="2_compare_odds"-->
-        <!--id="2_compare_odds" onblur="totalscore_odds()"-->
-        <!--value="" placeholder="小于进球数赔率"></td>-->
-        <!--<td>-->
-        <!--<span id="calres_totalscore"></span>-->
-        <!--</td>-->
-        <!--<script type="text/javascript">-->
-        <!--function totalscore_odds()-->
-        <!--{-->
-        <!--var score_id_1 =  $("input[id='1_compare_odds']").val();-->
-        <!--var score_id_2 =  $("input[id='2_compare_odds']").val();-->
-        <!--if(score_id_1 !=0 && score_id_2 !=0 )-->
-        <!--{-->
-        <!--var odds = 1/score_id_1 + 1/score_id_2;-->
-        <!--var calres = (1/odds).toFixed(2);-->
-        <!--if(  0.92<= calres >= 0.8)-->
-        <!--{-->
-        <!--//显示绿色-->
-        <!--var calres_rf = document.getElementById('calres_totalscore');-->
-        <!--$('#calres_totalscore').addClass('calres_show');-->
-        <!--calres_rf.innerText = calres;-->
-        <!--}else{-->
-        <!--//显示红色-->
-        <!--var calres_rf = document.getElementById('calres_totalscore');-->
-        <!--calres_rf.innerText = calres;-->
-        <!--}-->
-        <!--}else{-->
-        <!--return;-->
-        <!--}-->
-        <!--}-->
-        <!--</script>-->
+            <!--<td><strong>局间竞猜</strong></td>-->
+            <!--<td><input type="text" name="1_odds_jujian"-->
+                       <!--id="1_odds_jujian" onblur="jj_odds()"-->
+                       <!--value="" placeholder="A胜" autocomplete="off"></td>-->
+            <!--<td><input type="text" name="2_odds_jujian"-->
+                       <!--id="2_odds_jujian" onblur="jj_odds()"-->
+                       <!--value="" placeholder="B胜" autocomplete="off"></td>-->
+            <!--<td><strong>是否开启</strong></td>-->
+            <!--<td class="radio-style" style="text-align: left">-->
+                <!--<label><input type="radio"-->
+                              <!--name="is_open" value="1">是</label>-->
+                <!--<label><input type="radio"-->
+                              <!--name="is_open" value="0">否</label>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<span id="calres_jj"></span>-->
+            <!--</td>-->
+            <!--<script type="text/javascript">-->
+                <!--function jj_odds()-->
+                <!--{-->
+                    <!--var jj_id_1 =  $("input[id='1_odds_jujian']").val();-->
+                    <!--var jj_id_2 =  $("input[id='2_odds_jujian']").val();-->
+                    <!--if(jj_id_1 !=0 && jj_id_2 !=0 )-->
+                    <!--{-->
+                        <!--var odds = 1/jj_id_1 + 1/jj_id_2;-->
+                        <!--var calres = (1/odds).toFixed(2);-->
+                        <!--if(  0.92<= calres >= 0.8)-->
+                        <!--{-->
+                            <!--//显示绿色-->
+                            <!--var calres_jj = document.getElementById('calres_jj');-->
+                            <!--$('#calres_jj').addClass('calres_show');-->
+                            <!--calres_jj.innerText = calres;-->
+                        <!--}else{-->
+                            <!--//显示红色-->
+                            <!--var calres_jj = document.getElementById('calres_jj');-->
+                            <!--calres_jj.innerText = calres;-->
+                        <!--}-->
+                    <!--}else{-->
+                        <!--return;-->
+                    <!--}-->
+                <!--}-->
+            <!--</script>-->
         <!--</tr>-->
 
-
-        <tr class="text-c">
-            <td><strong>局间竞猜</strong></td>
-            <td><input type="text" name="1_odds_jujian"
-                       id="1_odds_jujian" onblur="jj_odds()"
-                       value="" placeholder="A胜" autocomplete="off"></td>
-            <td><input type="text" name="2_odds_jujian"
-                       id="2_odds_jujian" onblur="jj_odds()"
-                       value="" placeholder="B胜" autocomplete="off"></td>
-            <td><strong>是否开启</strong></td>
-            <td class="radio-style" style="text-align: left">
-                <label><input type="radio"
-                              name="is_open" value="1">是</label>
-                <label><input type="radio"
-                              name="is_open" value="0">否</label>
-            </td>
-            <td>
-                <span id="calres_jj"></span>
-            </td>
-            <script type="text/javascript">
-                function jj_odds()
-                {
-                    var jj_id_1 =  $("input[id='1_odds_jujian']").val();
-                    var jj_id_2 =  $("input[id='2_odds_jujian']").val();
-                    if(jj_id_1 !=0 && jj_id_2 !=0 )
-                    {
-                        var odds = 1/jj_id_1 + 1/jj_id_2;
-                        var calres = (1/odds).toFixed(2);
-                        if(  0.92<= calres >= 0.8)
-                        {
-                            //显示绿色
-                            var calres_jj = document.getElementById('calres_jj');
-                            $('#calres_jj').addClass('calres_show');
-                            calres_jj.innerText = calres;
-                        }else{
-                            //显示红色
-                            var calres_jj = document.getElementById('calres_jj');
-                            calres_jj.innerText = calres;
-                        }
-                    }else{
-                        return;
-                    }
-                }
-            </script>
-        </tr>
-
-        <tr class="text-c score-odds">
-            <td><strong>比分赔率</strong></td>
-            <td colspan="8"></td>
-        </tr>
+        <!--<tr class="text-c score-odds">-->
+            <!--<td><strong>比分赔率</strong></td>-->
+            <!--<td colspan="8"></td>-->
+        <!--</tr>-->
         </tbody>
     </table>
 

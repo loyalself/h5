@@ -25,9 +25,8 @@ class GamePhase extends Common
         $where = [];
         $bigGame_id = intval(input('param.id'));
         $where['bigGame_id'] = $bigGame_id;
-
+        $where['status'] = ['neq',1];
         $list = $this->db->table('game_phase')->where($where)->select();
-
         return view('',[
             'bigGame_id'=>$bigGame_id,
             'list'=>$list
@@ -70,19 +69,32 @@ class GamePhase extends Common
         ]);
     }
 
+    /**
+     * 删除,并不是硬删除,只是软删除,更改status的值为1
+     * @param primary key id int 阶段id
+     */
     public function del()
     {
-        $id = intval(input('post.id'));
-        try{
-            $res = $this->db->table('game_phase')->where('id',$id)->delete();
-        }catch (\Exception $e){
-            return json_show($e->getMessage(),0);
-        }
-        if($res)
+        if(request()->isPost())
         {
-            return json_show('删除成功',1);
+            $id = input('post.id');
+            try{
+                $sql = "update game_phase gp inner join game_live gl
+                        on gp.id = gl.phase_id 
+                        set gp.status = 1,gl.status = 1
+                        where gp.id = $id";
+                $res = $this->db->execute($sql);
+            }catch (\Exception $e){
+                return json_show($e->getMessage(),0);
+            }
+            if($res)
+            {
+                return json_show('删除成功',1);
+            }else{
+                return json_show('删除失败',0);
+            }
         }else{
-            return json_show('删除失败',0);
+            return json_show('操作异常,请稍后再试',0);
         }
     }
 }
